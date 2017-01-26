@@ -56,6 +56,8 @@ var lngs = {"0":-157.9255357,"1":-118.2351192,"2":-118.032844,"3":-74.1002478,"4
 		maxZoom: 18,
 
 	}).addTo(mymap1);
+	attribution = mymap1.attributionControl;
+	attribution.setPrefix('');
 
 
 	var mymap2 = L.map('mapid2').setView([lats[2], lngs[2]], zoominit);
@@ -63,6 +65,8 @@ var lngs = {"0":-157.9255357,"1":-118.2351192,"2":-118.032844,"3":-74.1002478,"4
 	L.tileLayer(onlyroads, {
 		maxZoom: 18,
 	}).addTo(mymap2);
+	attribution = mymap2.attributionControl;
+	attribution.setPrefix('');
 
 
 	var mymap3 = L.map('mapid3').setView([lats[3], lngs[3]], zoominit);
@@ -70,6 +74,8 @@ var lngs = {"0":-157.9255357,"1":-118.2351192,"2":-118.032844,"3":-74.1002478,"4
 	L.tileLayer(onlyroads, {
 		maxZoom: 18,
 	}).addTo(mymap3);
+	attribution = mymap3.attributionControl;
+	attribution.setPrefix('');
 
 
 	var mymap4 = L.map('mapid4').setView([lats[4], lngs[4]], zoominit);
@@ -77,6 +83,8 @@ var lngs = {"0":-157.9255357,"1":-118.2351192,"2":-118.032844,"3":-74.1002478,"4
 	L.tileLayer(onlyroads, {
 		maxZoom: 18,
 	}).addTo(mymap4);
+	attribution = mymap4.attributionControl;
+	attribution.setPrefix('');
 
 
 	var mymap5 = L.map('mapid5').setView([lats[5], lngs[5]], zoominit);
@@ -84,6 +92,8 @@ var lngs = {"0":-157.9255357,"1":-118.2351192,"2":-118.032844,"3":-74.1002478,"4
 	L.tileLayer(onlyroads, {
 		maxZoom: 18,
 	}).addTo(mymap5);
+	attribution = mymap5.attributionControl;
+	attribution.setPrefix('');
 
 
 	var mymap6 = L.map('mapid6').setView([lats[6], lngs[6]], zoominit);
@@ -91,18 +101,24 @@ var lngs = {"0":-157.9255357,"1":-118.2351192,"2":-118.032844,"3":-74.1002478,"4
 	L.tileLayer(onlyroads, {
 		maxZoom: 18,
 	}).addTo(mymap6);
+	attribution = mymap6.attributionControl;
+	attribution.setPrefix('');
 
 	var mymap7 = L.map('mapid7').setView([lats[7], lngs[7]], zoominit);
 
 	L.tileLayer(onlyroads, {
 		maxZoom: 18,
 	}).addTo(mymap7);
+	attribution = mymap7.attributionControl;
+	attribution.setPrefix('');
 
 	var mymap8 = L.map('mapid8').setView([lats[8], lngs[8]], zoominit);
 
 	L.tileLayer(onlyroads, {
 		maxZoom: 18,
 	}).addTo(mymap8);
+	attribution = mymap8.attributionControl;
+	attribution.setPrefix('');
 
 
 	var mymap9 = L.map('mapid9').setView([lats[9], lngs[9]], zoominit);
@@ -110,24 +126,32 @@ var lngs = {"0":-157.9255357,"1":-118.2351192,"2":-118.032844,"3":-74.1002478,"4
 	L.tileLayer(onlyroads, {
 		maxZoom: 18,
 	}).addTo(mymap9);
+	attribution = mymap9.attributionControl;
+	attribution.setPrefix('');
 
 	var mymap10 = L.map('mapid10').setView([lats[10], lngs[10]], zoominit);
 
 	L.tileLayer(onlyroads, {
 		maxZoom: 18,
 	}).addTo(mymap10);
+	attribution = mymap10.attributionControl;
+	attribution.setPrefix('');
 
 	var mymap11 = L.map('mapid11').setView([lats[11], lngs[11]], zoominit);
 
 	L.tileLayer(onlyroads, {
 		maxZoom: 18,
 	}).addTo(mymap11);
+	attribution = mymap11.attributionControl;
+	attribution.setPrefix('');
 
 	var mymap12 = L.map('mapid12').setView([lats[12], lngs[12]], zoominit);
 
 	L.tileLayer(onlyroads, {
 		maxZoom: 18,
 	}).addTo(mymap12);
+	attribution = mymap12.attributionControl;
+	attribution.setPrefix('');
 
 	var mymap13 = L.map('mapid13').setView([lats[13], lngs[13]], zoominit);
 

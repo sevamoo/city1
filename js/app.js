@@ -19,7 +19,7 @@ $.getJSON("data/city_neigs_names.json", function(json) {
 
 var city_neigs_lats;
 $.getJSON("data/city_neigs_lats.json", function(json) {
-	city_neigs_lats = json;
+	city_neigs_lngs = json;
 //    console.log(city_neigs_lats[0]); // this will show the info it in firebug console
 });
 
@@ -27,15 +27,16 @@ $.getJSON("data/city_neigs_lats.json", function(json) {
 var city_neigs_lngs;
 $.getJSON("data/city_neigs_lngs.json", function(json) {
 	city_neigs_lngs = json;
-    console.log(city_neigs_lngs[0]); // this will show the info it in firebug console
+//    console.log(city_neigs_lngs[0]); // this will show the info it in firebug console
 });
 
 
 cityid = document.getElementById("cityname").value;
-//mymap14 = L.map('mapid14').setView([51.505, -0.09], 10);
+console.log(cityid)
+
 
 lngs = city_neigs_lngs[cityid]
-lats = city_neigs_lats[cityid]
+lats = city_neigs_lngs[cityid]
 
 	var mymap0 = L.map('mapid0').setView([lats[0], lngs[0]], zoominit);
 

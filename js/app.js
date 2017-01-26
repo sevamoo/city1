@@ -3,7 +3,7 @@ var onlyroads = "https://api.mapbox.com/styles/v1/sevamoo/cix65j03d008v2pnw5npbx
 var basemap ='https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw'
 var zoominit = 12.1
 
-//var citynames;
+var citynames;
 //d3.json('/data/test.json',function(error,data){
 //if (error) throw error;
 //citynames = data;
@@ -12,6 +12,7 @@ var zoominit = 12.1
 
 
 $.getJSON("data/test.json", function(json) {
+	citynames = json[0];
     console.log(json[0][0]); // this will show the info it in firebug console
 });
 
@@ -120,5 +121,46 @@ $.getJSON("data/test.json", function(json) {
 	}).addTo(mymap14);
 
 
+function find_similar_cities(){
+
+d3.select("#Rentchart").selectAll("svg").remove();
+
+document.querySelector('#analysisresultstext').value = ''
+document.querySelector('#analysisresultstext').style['border']= '1px  steelblue'
+
+
+cityid = document.getElementById("cityname").value;
+console.log(id,citynames[cityid])
+//mymap14 = L.map('mapid14').setView([51.505, -0.09], 10);
+mymap14.setView(map.getCenter(), 10);
+
+
+//if (RENTORSALE == 'rent'){
+//    itemType = document.getElementById("itemType").value;
+//    Cityname = document.getElementById("Cityname").value;
+//    ZIP = document.getElementById("ZIP").value;
+//    Adress1 = document.getElementById("itemAdress1").value;
+//    Adress2 = document.getElementById("itemAdress2").value;
+//    Adress3 = document.getElementById("itemAdress3").value;
+//    Address = Cityname + " "+ ZIP +" "+ Adress1+" " + Adress2+ " " + Adress3 + " Switzerland"
+//    Rooms = document.getElementById("itemRooms").value;
+//    Floor = document.getElementById("itemFloor").value;
+//    Living_space = document.getElementById("itemLiving_space").value;
+//    Year_built = document.getElementById("itemYear_built").value;
+//    Last_renovation = document.getElementById("itemLast_renovation").value;
+//
+//
+//
+//    }
+// else{
+//// return nothing for now
+// }
+
+
+
+
+
+
+}
 
 

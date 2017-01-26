@@ -153,6 +153,8 @@ lats = city_neigs_lats[cityid]
 neigs_names  =city_neigs_names[cityid]
 
 
+console.log(lats);
+
 mymap0.setView( [lats[0], lngs[0]], 12.1);
 mymap1.setView( [lats[1], lngs[1]], 12.1);
 mymap2.setView( [lats[2], lngs[2]], 12.1);

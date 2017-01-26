@@ -31,7 +31,7 @@ $.getJSON("data/city_neigs_lats.json", function(json) {
 var city_neigs_lngs;
 $.getJSON("data/city_neigs_lngs.json", function(json) {
 	city_neigs_lngs = json;
-    console.log(city_neigs_lngs[0]); // this will show the info it in firebug console
+//    console.log(city_neigs_lngs[0]); // this will show the info it in firebug console
 });
 
 
@@ -241,7 +241,7 @@ function change_zoom(){
 
 ZoomVal = document.getElementById("Zoom").value;
 document.querySelector('#ZoomVal').value = ZoomVal;
-console.log(ZoomVal);
+//console.log(ZoomVal);
 
 mymap0.setZoom(ZoomVal);
 mymap1.setZoom(ZoomVal);

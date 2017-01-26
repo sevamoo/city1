@@ -12,7 +12,7 @@ var zoominit = 12.1
 
 
 $.getJSON("data/test.json", function(json) {
-    console.log(json[0]); // this will show the info it in firebug console
+    console.log(json[0][0]); // this will show the info it in firebug console
 });
 
 

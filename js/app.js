@@ -134,6 +134,8 @@ var lngs = {"0":-157.9255357,"1":-118.2351192,"2":-118.032844,"3":-74.1002478,"4
 	L.tileLayer(onlyroads, {
 		maxZoom: 18,
 	}).addTo(mymap13);
+	attribution = mymap13.attributionControl;
+	attribution.setPrefix('');
 
 	var mymap14 = L.map('mapid14').setView([lats[14], lngs[14]], zoominit);
 

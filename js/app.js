@@ -203,7 +203,8 @@ mymap14.setView( [lats[14], lngs[14]], 12.1);
 
 function change_zoom(){
 
-ZoomVal = document.getElementById("ZoomVal").value;
+ZoomVal = document.getElementById("Zoom").value;
+document.querySelector('#ZoomVal').value = MinRooms;
 console.log(ZoomVal);
 
 mymap0.setZoom(ZoomVal);

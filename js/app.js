@@ -338,6 +338,14 @@ onlyroads = White;
 }
 
 
+L.tileLayer(onlyroads, {
+		maxZoom: 18,
+
+	}).addTo(mymap0);
+	attribution = mymap0.attributionControl;
+	attribution.setPrefix('');
+
+
 
 
 }

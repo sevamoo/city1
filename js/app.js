@@ -70,127 +70,245 @@ var lngs = {"0":-159.5872222,"1":-104.4644112,"2":-99.4415007,"3":-101.7526723,"
 	zoomControl:false,
 	maxZoom: 18,
 	layers: [WhiteLayer],
-
 	}).setView([lats[0], lngs[0]], zoominit);
 	attribution = mymap0.attributionControl;
 	attribution.setPrefix('');
 
-	var mymap1 = L.map('mapid1',{ zoomControl:false }).setView([lats[1], lngs[1]], zoominit);
 
-	L.tileLayer(onlyroads, {
-		maxZoom: 18,
-
-	}).addTo(mymap1);
+	var mymap1 = L.map('mapid1',{
+	zoomControl:false,
+	maxZoom: 18,
+	layers: [WhiteLayer],
+	}).setView([lats[0], lngs[0]], zoominit);
 	attribution = mymap1.attributionControl;
 	attribution.setPrefix('');
 
 
-	var mymap2 = L.map('mapid2',{ zoomControl:false }).setView([lats[2], lngs[2]], zoominit);
-
-	L.tileLayer(onlyroads, {
-		maxZoom: 18,
-	}).addTo(mymap2);
+	var mymap2 = L.map('mapid2',{
+	zoomControl:false,
+	maxZoom: 18,
+	layers: [WhiteLayer],
+	}).setView([lats[0], lngs[0]], zoominit);
 	attribution = mymap2.attributionControl;
 	attribution.setPrefix('');
 
 
-	var mymap3 = L.map('mapid3',{ zoomControl:false }).setView([lats[3], lngs[3]], zoominit);
-
-	L.tileLayer(onlyroads, {
-		maxZoom: 18,
-	}).addTo(mymap3);
+	var mymap3 = L.map('mapid3',{
+	zoomControl:false,
+	maxZoom: 18,
+	layers: [WhiteLayer],
+	}).setView([lats[0], lngs[0]], zoominit);
 	attribution = mymap3.attributionControl;
 	attribution.setPrefix('');
 
 
-	var mymap4 = L.map('mapid4',{ zoomControl:false }).setView([lats[4], lngs[4]], zoominit);
-
-	L.tileLayer(onlyroads, {
-		maxZoom: 18,
-	}).addTo(mymap4);
+	var mymap4 = L.map('mapid4',{
+	zoomControl:false,
+	maxZoom: 18,
+	layers: [WhiteLayer],
+	}).setView([lats[0], lngs[0]], zoominit);
 	attribution = mymap4.attributionControl;
 	attribution.setPrefix('');
 
-
-	var mymap5 = L.map('mapid5',{ zoomControl:false }).setView([lats[5], lngs[5]], zoominit);
-
-	L.tileLayer(onlyroads, {
-		maxZoom: 18,
-	}).addTo(mymap5);
+	var mymap5 = L.map('mapid5',{
+	zoomControl:false,
+	maxZoom: 18,
+	layers: [WhiteLayer],
+	}).setView([lats[0], lngs[0]], zoominit);
 	attribution = mymap5.attributionControl;
 	attribution.setPrefix('');
 
-
-	var mymap6 = L.map('mapid6',{ zoomControl:false }).setView([lats[6], lngs[6]], zoominit);
-
-	L.tileLayer(onlyroads, {
-		maxZoom: 18,
-	}).addTo(mymap6);
+	var mymap6 = L.map('mapid6',{
+	zoomControl:false,
+	maxZoom: 18,
+	layers: [WhiteLayer],
+	}).setView([lats[0], lngs[0]], zoominit);
 	attribution = mymap6.attributionControl;
 	attribution.setPrefix('');
 
-	var mymap7 = L.map('mapid7',{ zoomControl:false }).setView([lats[7], lngs[7]], zoominit);
 
-	L.tileLayer(onlyroads, {
-		maxZoom: 18,
-	}).addTo(mymap7);
+	var mymap7 = L.map('mapid7',{
+	zoomControl:false,
+	maxZoom: 18,
+	layers: [WhiteLayer],
+	}).setView([lats[0], lngs[0]], zoominit);
 	attribution = mymap7.attributionControl;
 	attribution.setPrefix('');
 
-	var mymap8 = L.map('mapid8',{ zoomControl:false }).setView([lats[8], lngs[8]], zoominit);
 
-	L.tileLayer(onlyroads, {
-		maxZoom: 18,
-	}).addTo(mymap8);
+	var mymap8 = L.map('mapid8',{
+	zoomControl:false,
+	maxZoom: 18,
+	layers: [WhiteLayer],
+	}).setView([lats[0], lngs[0]], zoominit);
 	attribution = mymap8.attributionControl;
 	attribution.setPrefix('');
 
-
-	var mymap9 = L.map('mapid9',{ zoomControl:false }).setView([lats[9], lngs[9]], zoominit);
-
-	L.tileLayer(onlyroads, {
-		maxZoom: 18,
-	}).addTo(mymap9);
+	var mymap9 = L.map('mapid9',{
+	zoomControl:false,
+	maxZoom: 18,
+	layers: [WhiteLayer],
+	}).setView([lats[0], lngs[0]], zoominit);
 	attribution = mymap9.attributionControl;
 	attribution.setPrefix('');
 
-	var mymap10 = L.map('mapid10',{ zoomControl:false }).setView([lats[10], lngs[10]], zoominit);
-
-	L.tileLayer(onlyroads, {
-		maxZoom: 18,
-	}).addTo(mymap10);
+	var mymap10 = L.map('mapid10',{
+	zoomControl:false,
+	maxZoom: 18,
+	layers: [WhiteLayer],
+	}).setView([lats[0], lngs[0]], zoominit);
 	attribution = mymap10.attributionControl;
 	attribution.setPrefix('');
 
-	var mymap11 = L.map('mapid11',{ zoomControl:false }).setView([lats[11], lngs[11]], zoominit);
-
-	L.tileLayer(onlyroads, {
-		maxZoom: 18,
-	}).addTo(mymap11);
+	var mymap11 = L.map('mapid11',{
+	zoomControl:false,
+	maxZoom: 18,
+	layers: [WhiteLayer],
+	}).setView([lats[0], lngs[0]], zoominit);
 	attribution = mymap11.attributionControl;
 	attribution.setPrefix('');
 
-	var mymap12 = L.map('mapid12',{ zoomControl:false }).setView([lats[12], lngs[12]], zoominit);
-
-	L.tileLayer(onlyroads, {
-		maxZoom: 18,
-	}).addTo(mymap12);
+	var mymap12 = L.map('mapid12',{
+	zoomControl:false,
+	maxZoom: 18,
+	layers: [WhiteLayer],
+	}).setView([lats[0], lngs[0]], zoominit);
 	attribution = mymap12.attributionControl;
 	attribution.setPrefix('');
 
-	var mymap13 = L.map('mapid13',{ zoomControl:false }).setView([lats[13], lngs[13]], zoominit);
-
-	L.tileLayer(onlyroads, {
-		maxZoom: 18,
-	}).addTo(mymap13);
+	var mymap13 = L.map('mapid13',{
+	zoomControl:false,
+	maxZoom: 18,
+	layers: [WhiteLayer],
+	}).setView([lats[0], lngs[0]], zoominit);
 	attribution = mymap13.attributionControl;
 	attribution.setPrefix('');
 
-	var mymap14 = L.map('mapid14',{ zoomControl:false }).setView([lats[14], lngs[14]], zoominit);
+	var mymap14 = L.map('mapid14',{
+	zoomControl:false,
+	maxZoom: 18,
+	layers: [WhiteLayer],
+	}).setView([lats[0], lngs[0]], zoominit);
+	attribution = mymap14.attributionControl;
+	attribution.setPrefix('');
 
-	L.tileLayer(onlyroads, {
-		maxZoom: 18,
-	}).addTo(mymap14);
+
+//	var mymap1 = L.map('mapid1',{ zoomControl:false }).setView([lats[1], lngs[1]], zoominit);
+//
+//	L.tileLayer(onlyroads, {
+//		maxZoom: 18,
+//
+//	}).addTo(mymap1);
+//	attribution = mymap1.attributionControl;
+//	attribution.setPrefix('');
+//
+//
+//	var mymap2 = L.map('mapid2',{ zoomControl:false }).setView([lats[2], lngs[2]], zoominit);
+//
+//	L.tileLayer(onlyroads, {
+//		maxZoom: 18,
+//	}).addTo(mymap2);
+//	attribution = mymap2.attributionControl;
+//	attribution.setPrefix('');
+//
+//
+//	var mymap3 = L.map('mapid3',{ zoomControl:false }).setView([lats[3], lngs[3]], zoominit);
+//
+//	L.tileLayer(onlyroads, {
+//		maxZoom: 18,
+//	}).addTo(mymap3);
+//	attribution = mymap3.attributionControl;
+//	attribution.setPrefix('');
+//
+//
+//	var mymap4 = L.map('mapid4',{ zoomControl:false }).setView([lats[4], lngs[4]], zoominit);
+//
+//	L.tileLayer(onlyroads, {
+//		maxZoom: 18,
+//	}).addTo(mymap4);
+//	attribution = mymap4.attributionControl;
+//	attribution.setPrefix('');
+//
+//
+//	var mymap5 = L.map('mapid5',{ zoomControl:false }).setView([lats[5], lngs[5]], zoominit);
+//
+//	L.tileLayer(onlyroads, {
+//		maxZoom: 18,
+//	}).addTo(mymap5);
+//	attribution = mymap5.attributionControl;
+//	attribution.setPrefix('');
+//
+//
+//	var mymap6 = L.map('mapid6',{ zoomControl:false }).setView([lats[6], lngs[6]], zoominit);
+//
+//	L.tileLayer(onlyroads, {
+//		maxZoom: 18,
+//	}).addTo(mymap6);
+//	attribution = mymap6.attributionControl;
+//	attribution.setPrefix('');
+//
+//	var mymap7 = L.map('mapid7',{ zoomControl:false }).setView([lats[7], lngs[7]], zoominit);
+//
+//	L.tileLayer(onlyroads, {
+//		maxZoom: 18,
+//	}).addTo(mymap7);
+//	attribution = mymap7.attributionControl;
+//	attribution.setPrefix('');
+//
+//	var mymap8 = L.map('mapid8',{ zoomControl:false }).setView([lats[8], lngs[8]], zoominit);
+//
+//	L.tileLayer(onlyroads, {
+//		maxZoom: 18,
+//	}).addTo(mymap8);
+//	attribution = mymap8.attributionControl;
+//	attribution.setPrefix('');
+//
+//
+//	var mymap9 = L.map('mapid9',{ zoomControl:false }).setView([lats[9], lngs[9]], zoominit);
+//
+//	L.tileLayer(onlyroads, {
+//		maxZoom: 18,
+//	}).addTo(mymap9);
+//	attribution = mymap9.attributionControl;
+//	attribution.setPrefix('');
+//
+//	var mymap10 = L.map('mapid10',{ zoomControl:false }).setView([lats[10], lngs[10]], zoominit);
+//
+//	L.tileLayer(onlyroads, {
+//		maxZoom: 18,
+//	}).addTo(mymap10);
+//	attribution = mymap10.attributionControl;
+//	attribution.setPrefix('');
+//
+//	var mymap11 = L.map('mapid11',{ zoomControl:false }).setView([lats[11], lngs[11]], zoominit);
+//
+//	L.tileLayer(onlyroads, {
+//		maxZoom: 18,
+//	}).addTo(mymap11);
+//	attribution = mymap11.attributionControl;
+//	attribution.setPrefix('');
+//
+//	var mymap12 = L.map('mapid12',{ zoomControl:false }).setView([lats[12], lngs[12]], zoominit);
+//
+//	L.tileLayer(onlyroads, {
+//		maxZoom: 18,
+//	}).addTo(mymap12);
+//	attribution = mymap12.attributionControl;
+//	attribution.setPrefix('');
+//
+//	var mymap13 = L.map('mapid13',{ zoomControl:false }).setView([lats[13], lngs[13]], zoominit);
+//
+//	L.tileLayer(onlyroads, {
+//		maxZoom: 18,
+//	}).addTo(mymap13);
+//	attribution = mymap13.attributionControl;
+//	attribution.setPrefix('');
+//
+//	var mymap14 = L.map('mapid14',{ zoomControl:false }).setView([lats[14], lngs[14]], zoominit);
+//
+//	L.tileLayer(onlyroads, {
+//		maxZoom: 18,
+//	}).addTo(mymap14);
 
 
 

@@ -132,7 +132,7 @@ d3.select("#Rentchart").selectAll("svg").remove();
 cityid = document.getElementById("cityname").value;
 console.log(cityid,citynames[cityid])
 //mymap14 = L.map('mapid14').setView([51.505, -0.09], 10);
-mymap14.setView(mymap14.getCenter(), 10);
+mymap14.setView( [47.3769, 8.5417], 10);
 
 
 //if (RENTORSALE == 'rent'){

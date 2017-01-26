@@ -1,7 +1,23 @@
 
 var rgb = "https://api.mapbox.com/styles/v1/sevamoo/cix65j03d008v2pnw5npbx7qj/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic2V2YW1vbyIsImEiOiJXcTg2dEI4In0.t2FKdE5vgT-BihNJusEz6Q"
-var dark = 'https://api.mapbox.com/styles/v1/sevamoo/ciyesucrg00342qml99q6rm7u/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic2V2YW1vbyIsImEiOiJXcTg2dEI4In0.t2FKdE5vgT-BihNJusEz6Q'
-var onlyroads = dark;
+var Dark = 'https://api.mapbox.com/styles/v1/sevamoo/ciyesucrg00342qml99q6rm7u/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic2V2YW1vbyIsImEiOiJXcTg2dEI4In0.t2FKdE5vgT-BihNJusEz6Q'
+var White = 'https://api.mapbox.com/styles/v1/sevamoo/ciyevt3o900372qmlt9qwkv42/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic2V2YW1vbyIsImEiOiJXcTg2dEI4In0.t2FKdE5vgT-BihNJusEz6Q'
+
+var onlyroads = White;
+var mapstyle =  document.getElementById("mapstyle").value;
+
+if (mapstyle == 'Dark'){
+onlyroads = Dark;
+
+}
+
+if (mapstyle == 'White'){
+onlyroads = White;
+
+}
+
+
+
 
 var basemap ='https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw'
 var zoominit = 13.0;
@@ -172,6 +188,24 @@ var lngs = {"0":-159.5872222,"1":-104.4644112,"2":-99.4415007,"3":-101.7526723,"
 
 
 
+function change_mapstyle(){
+
+mapstyle = document.getElementById("mapstyle").value;
+
+if (mapstyle == 'Dark'){
+onlyroads = Dark;
+
+}
+
+if (mapstyle == 'White'){
+onlyroads = White;
+
+}
+
+
+
+
+}
 
 
 function find_similar_cities(){

@@ -125,8 +125,8 @@ function find_similar_cities(){
 
 d3.select("#Rentchart").selectAll("svg").remove();
 
-document.querySelector('#analysisresultstext').value = ''
-document.querySelector('#analysisresultstext').style['border']= '1px  steelblue'
+//document.querySelector('#analysisresultstext').value = ''
+//document.querySelector('#analysisresultstext').style['border']= '1px  steelblue'
 
 
 cityid = document.getElementById("cityname").value;

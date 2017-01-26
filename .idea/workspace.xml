@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e3f1949-bb00-42a3-ad59-f5f28dcfcd84" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/test.json" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/js/app.js" />
     </list>
     <ignored path="cityfinder.iws" />
@@ -26,11 +27,11 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4673913">
-              <caret line="134" column="18" selection-start-line="134" selection-start-column="18" selection-end-line="134" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.27795032">
+              <caret line="160" column="42" selection-start-line="160" selection-start-column="42" selection-end-line="160" selection-end-column="42" />
               <folding>
-                <element signature="e#0#4097#0" expanded="false" />
-                <element signature="e#0#4097#0" expanded="false" />
+                <element signature="e#0#5265#0" expanded="false" />
+                <element signature="e#0#5265#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -335,11 +336,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4673913">
-          <caret line="134" column="18" selection-start-line="134" selection-start-column="18" selection-end-line="134" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.27795032">
+          <caret line="160" column="42" selection-start-line="160" selection-start-column="42" selection-end-line="160" selection-end-column="42" />
           <folding>
-            <element signature="e#0#4097#0" expanded="false" />
-            <element signature="e#0#4097#0" expanded="false" />
+            <element signature="e#0#5265#0" expanded="false" />
+            <element signature="e#0#5265#0" expanded="false" />
           </folding>
         </state>
       </provider>

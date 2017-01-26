@@ -4,17 +4,32 @@ var basemap ='https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=
 var zoominit = 12.1
 
 var citynames;
-//d3.json('/data/test.json',function(error,data){
-//if (error) throw error;
-//citynames = data;
-//});
-//console.log(citynames[0])
-
-
-$.getJSON("data/test.json", function(json) {
+$.getJSON("data/citynames.json", function(json) {
 	citynames = json[0];
     console.log(json[0][0]); // this will show the info it in firebug console
 });
+
+
+var city_neigs_names;
+$.getJSON("data/city_neigs_names.json", function(json) {
+	city_neigs_names = json[0];
+    console.log(json[0][0]); // this will show the info it in firebug console
+});
+
+
+var city_neigs_lats;
+$.getJSON("data/city_neigs_lats.json", function(json) {
+	city_neigs_lats = json[0];
+    console.log(json[0][0]); // this will show the info it in firebug console
+});
+
+
+var city_neigs_lngs;
+$.getJSON("data/city_neigs_lngs.json", function(json) {
+	city_neigs_lngs = json[0];
+    console.log(json[0][0]); // this will show the info it in firebug console
+});
+
 
 
 
@@ -132,7 +147,28 @@ d3.select("#Rentchart").selectAll("svg").remove();
 cityid = document.getElementById("cityname").value;
 console.log(cityid,citynames[cityid])
 //mymap14 = L.map('mapid14').setView([51.505, -0.09], 10);
-mymap14.setView( [47.3769, 8.5417], 10);
+
+lngs = city_neigs_lngs[cityid]
+lats = city_neigs_lats[cityid]
+neigs_names  =city_neigs_names[cityid]
+
+
+mymap0.setView( [lats[0], lngs[0]], 12.1);
+mymap1.setView( [lats[1], lngs[1]], 12.1);
+mymap2.setView( [lats[2], lngs[2]], 12.1);
+mymap3.setView( [lats[3], lngs[3]], 12.1);
+mymap4.setView( [lats[4], lngs[4]], 12.1);
+mymap5.setView( [lats[5], lngs[5]], 12.1);
+mymap6.setView( [lats[6], lngs[6]], 12.1);
+mymap7.setView( [lats[7], lngs[7]], 12.1);
+mymap8.setView( [lats[8], lngs[8]], 12.1);
+mymap9.setView( [lats[9], lngs[9]], 12.1);
+mymap10.setView( [lats[10], lngs[10]], 12.1);
+mymap11.setView( [lats[11], lngs[11]], 12.1);
+mymap12.setView( [lats[12], lngs[12]], 12.1);
+mymap13.setView( [lats[13], lngs[13]], 12.1);
+mymap14.setView( [lats[14], lngs[14]], 12.1);
+
 
 
 //if (RENTORSALE == 'rent'){

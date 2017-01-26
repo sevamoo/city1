@@ -201,7 +201,7 @@ mymap14.setView( [lats[14], lngs[14]], 12.1);
 }
 
 
-change_zoom(){
+function change_zoom(){
 
 ZoomVal = document.getElementById("ZoomVal").value;
 

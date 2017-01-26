@@ -78,7 +78,7 @@ var lngs = {"0":-159.5872222,"1":-104.4644112,"2":-99.4415007,"3":-101.7526723,"
 	var mymap1 = L.map('mapid1',{
 	zoomControl:false,
 	maxZoom: 18,
-	layers: [WhiteLayer],
+	layers: [DarkLayer],
 	}).setView([lats[0], lngs[0]], zoominit);
 	attribution = mymap1.attributionControl;
 	attribution.setPrefix('');

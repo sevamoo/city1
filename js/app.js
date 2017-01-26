@@ -10,10 +10,10 @@ var zoominit = 12.1
 //});
 //console.log(citynames[0])
 
-//
-//$.getJSON("data/test.json", function(json) {
-//    console.log(json[0]); // this will show the info it in firebug console
-//});
+
+$.getJSON("data/test.json", function(json) {
+    console.log(json[0]); // this will show the info it in firebug console
+});
 
 
 

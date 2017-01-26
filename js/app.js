@@ -12,22 +12,22 @@ $.getJSON("data/citynames.json", function(json) {
 
 var city_neigs_names;
 $.getJSON("data/city_neigs_names.json", function(json) {
-	city_neigs_names = json[0];
-    console.log(json[0][0]); // this will show the info it in firebug console
+	city_neigs_names = json;
+    console.log(city_neigs_names[0]); // this will show the info it in firebug console
 });
 
 
 var city_neigs_lats;
 $.getJSON("data/city_neigs_lats.json", function(json) {
-	city_neigs_lats = json[0];
-    console.log(json[0][0]); // this will show the info it in firebug console
+	city_neigs_lats = json;
+    console.log(city_neigs_lats[0]); // this will show the info it in firebug console
 });
 
 
 var city_neigs_lngs;
 $.getJSON("data/city_neigs_lngs.json", function(json) {
-	city_neigs_lngs = json[0];
-    console.log(json[0][0]); // this will show the info it in firebug console
+	city_neigs_lngs = json;
+    console.log(city_neigs_lngs[0]); // this will show the info it in firebug console
 });
 
 

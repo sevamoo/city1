@@ -31,6 +31,9 @@ $.getJSON("data/city_neigs_lngs.json", function(json) {
 });
 
 
+
+function initiate_map(){
+
 cityid = document.getElementById("cityname").value;
 console.log(cityid);
 
@@ -139,6 +142,12 @@ lats = city_neigs_lats[cityid]
 		maxZoom: 18,
 	}).addTo(mymap14);
 
+
+
+}
+
+
+initiate_map();
 
 function find_similar_cities(){
 

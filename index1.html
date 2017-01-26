@@ -14,7 +14,82 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
-	
+
+
+	 <!-- Custom CSS -->
+    <link href="css/full-slider.css" rel="stylesheet">
+
+
+	    <style>
+
+
+
+.center {
+    text-align: center;
+
+}
+      .form-group {
+    margin: auto;
+    width: 60%;
+    border: 1px  steelblue;
+    padding: 10px;
+}
+
+input[type=range]{
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+	background: #ddd;
+    border: none;
+    <!--background: 3f91e5;;-->
+    <!--border: steelblue;-->
+    border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+    margin-top: -4px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+		/* style all input elements with a required attribute */
+input:required {
+  box-shadow: 4px 4px 5px goldenrod;
+}
+
+/**
+ * style input elements that have a required
+ * attribute and a focus state
+ */
+input:required:focus {
+  border: 1px solid red;
+  outline: none;
+}
+
+/**
+ * style input elements that have a required
+ * attribute and a hover state
+ */
+input:required:hover {
+  opacity: 1;
+}
+
+
+
+</style>
+
+
 </head>
 <body>
 
@@ -69,7 +144,7 @@
 
 				<hr class="colorgraph">
 				<div class="form-group">
-                  <label for="RENTORSALE">Select A City </label>
+                  <label for="cityname">Select A City </label>
                   <select class="form-control" id="cityname" required="required" style="width:180px">
 
 <option value="0">Aiea United States</option>
@@ -12785,6 +12860,11 @@
                         <!--<option value="sale">Sale</option>-->
                   </select>
                 </div>
+					 <div class="form-group">
+					 <label  for="Zoom" >Zoom</label>
+					 <output for="Zoom" id="ZoomVal">12.1</output>
+					 <input class="form-control" type="range" id="ZoomVal" step='.1' value="12.1" min="10" max="18" onchange="change_zoom()">
+				 </div>
 
 
 				</fieldset>

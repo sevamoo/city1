@@ -138,7 +138,6 @@ $.getJSON("data/city_neigs_lngs.json", function(json) {
 
 function find_similar_cities(){
 
-d3.select("#Rentchart").selectAll("svg").remove();
 
 //document.querySelector('#analysisresultstext').value = ''
 //document.querySelector('#analysisresultstext').style['border']= '1px  steelblue'
@@ -196,6 +195,31 @@ mymap14.setView( [lats[14], lngs[14]], 12.1);
 
 
 
+
+
+
+}
+
+
+change_zoom(){
+
+ZoomVal = document.getElementById("ZoomVal").value;
+
+mymap0.setZoom(ZoomVal);
+mymap1.setZoom(ZoomVal);
+mymap2.setZoom(ZoomVal);
+mymap3.setZoom(ZoomVal);
+mymap4.setZoom(ZoomVal);
+mymap5.setZoom(ZoomVal);
+mymap6.setZoom(ZoomVal);
+mymap7.setZoom(ZoomVal);
+mymap8.setZoom(ZoomVal);
+mymap9.setZoom(ZoomVal);
+mymap10.setZoom(ZoomVal);
+mymap11.setZoom(ZoomVal);
+mymap12.setZoom(ZoomVal);
+mymap13.setZoom(ZoomVal);
+mymap14.setZoom(ZoomVal);
 
 
 

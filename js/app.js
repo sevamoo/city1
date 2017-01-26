@@ -68,14 +68,10 @@ var lngs = {"0":-159.5872222,"1":-104.4644112,"2":-99.4415007,"3":-101.7526723,"
 
 	var mymap0 = L.map('mapid0',{
 	zoomControl:false,
+	maxZoom: 18,
 	layers: [WhiteLayer],
 
 	}).setView([lats[0], lngs[0]], zoominit);
-
-//	L.tileLayer(onlyroads, {
-//		maxZoom: 18,
-//
-//	}).addTo(mymap0);
 	attribution = mymap0.attributionControl;
 	attribution.setPrefix('');
 

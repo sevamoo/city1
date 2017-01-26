@@ -31,11 +31,11 @@ $.getJSON("data/city_neigs_lngs.json", function(json) {
 });
 
 
-var cityid = document.getElementById("cityname").value;
+cityid = document.getElementById("cityname").value;
 //mymap14 = L.map('mapid14').setView([51.505, -0.09], 10);
 
-var lngs = city_neigs_lngs[cityid]
-var lats = city_neigs_lats[cityid]
+lngs = city_neigs_lngs[cityid]
+lats = city_neigs_lats[cityid]
 
 	var mymap0 = L.map('mapid0').setView([lats[0], lngs[0]], zoominit);
 
@@ -144,7 +144,7 @@ function find_similar_cities(){
 
 
 cityid = document.getElementById("cityname").value;
-console.log(cityid,citynames[cityid])
+//console.log(cityid,citynames[cityid])
 //mymap14 = L.map('mapid14').setView([51.505, -0.09], 10);
 
 lngs = city_neigs_lngs[cityid]

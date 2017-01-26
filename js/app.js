@@ -32,7 +32,6 @@ $.getJSON("data/city_neigs_lngs.json", function(json) {
 
 
 
-function initiate_map(){
 
 var cityid = document.getElementById("cityname").value;
 
@@ -144,10 +143,7 @@ var lngs = {"0":-157.9255357,"1":-118.2351192,"2":-118.032844,"3":-74.1002478,"4
 
 
 
-}
 
-
-initiate_map();
 
 function find_similar_cities(){
 

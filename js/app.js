@@ -345,7 +345,107 @@ L.tileLayer(onlyroads, {
 	attribution = mymap0.attributionControl;
 	attribution.setPrefix('');
 
+L.tileLayer(onlyroads, {
+		maxZoom: 18,
 
+	}).addTo(mymap1);
+	attribution = mymap1.attributionControl;
+	attribution.setPrefix('');
+
+
+
+	L.tileLayer(onlyroads, {
+		maxZoom: 18,
+	}).addTo(mymap2);
+	attribution = mymap2.attributionControl;
+	attribution.setPrefix('');
+
+
+
+	L.tileLayer(onlyroads, {
+		maxZoom: 18,
+	}).addTo(mymap3);
+	attribution = mymap3.attributionControl;
+	attribution.setPrefix('');
+
+
+
+	L.tileLayer(onlyroads, {
+		maxZoom: 18,
+	}).addTo(mymap4);
+	attribution = mymap4.attributionControl;
+	attribution.setPrefix('');
+
+
+
+	L.tileLayer(onlyroads, {
+		maxZoom: 18,
+	}).addTo(mymap5);
+	attribution = mymap5.attributionControl;
+	attribution.setPrefix('');
+
+
+
+	L.tileLayer(onlyroads, {
+		maxZoom: 18,
+	}).addTo(mymap6);
+	attribution = mymap6.attributionControl;
+	attribution.setPrefix('');
+
+
+	L.tileLayer(onlyroads, {
+		maxZoom: 18,
+	}).addTo(mymap7);
+	attribution = mymap7.attributionControl;
+	attribution.setPrefix('');
+
+
+	L.tileLayer(onlyroads, {
+		maxZoom: 18,
+	}).addTo(mymap8);
+	attribution = mymap8.attributionControl;
+	attribution.setPrefix('');
+
+
+
+	L.tileLayer(onlyroads, {
+		maxZoom: 18,
+	}).addTo(mymap9);
+	attribution = mymap9.attributionControl;
+	attribution.setPrefix('');
+
+
+	L.tileLayer(onlyroads, {
+		maxZoom: 18,
+	}).addTo(mymap10);
+	attribution = mymap10.attributionControl;
+	attribution.setPrefix('');
+
+
+	L.tileLayer(onlyroads, {
+		maxZoom: 18,
+	}).addTo(mymap11);
+	attribution = mymap11.attributionControl;
+	attribution.setPrefix('');
+
+
+	L.tileLayer(onlyroads, {
+		maxZoom: 18,
+	}).addTo(mymap12);
+	attribution = mymap12.attributionControl;
+	attribution.setPrefix('');
+
+
+	L.tileLayer(onlyroads, {
+		maxZoom: 18,
+	}).addTo(mymap13);
+	attribution = mymap13.attributionControl;
+	attribution.setPrefix('');
+
+
+	L.tileLayer(onlyroads, {
+		maxZoom: 18,
+	}).addTo(mymap14);
 
 
 }

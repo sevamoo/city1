@@ -31,9 +31,13 @@ $.getJSON("data/city_neigs_lngs.json", function(json) {
 });
 
 
+var cityid = document.getElementById("cityname").value;
+//mymap14 = L.map('mapid14').setView([51.505, -0.09], 10);
 
+var lngs = city_neigs_lngs[cityid]
+var lats = city_neigs_lats[cityid]
 
-	var mymap0 = L.map('mapid0').setView([51.505, -0.09], zoominit);
+	var mymap0 = L.map('mapid0').setView([lats[0], lngs[0]], zoominit);
 
 	L.tileLayer(onlyroads, {
 		maxZoom: 18,
@@ -170,6 +174,7 @@ mymap12.setView( [lats[12], lngs[12]], 12.1);
 mymap13.setView( [lats[13], lngs[13]], 12.1);
 mymap14.setView( [lats[14], lngs[14]], 12.1);
 
+document.querySelector('#ZoomVal').value = zoominit;
 
 
 //if (RENTORSALE == 'rent'){

@@ -6,28 +6,28 @@ var zoominit = 12.1
 var citynames;
 $.getJSON("data/citynames.json", function(json) {
 	citynames = json[0];
-    console.log(json[0][0]); // this will show the info it in firebug console
+//    console.log(json[0][0]); // this will show the info it in firebug console
 });
 
 
 var city_neigs_names;
 $.getJSON("data/city_neigs_names.json", function(json) {
 	city_neigs_names = json;
-    console.log(city_neigs_names[0]); // this will show the info it in firebug console
+//    console.log(city_neigs_names[0]); // this will show the info it in firebug console
 });
 
 
 var city_neigs_lats;
 $.getJSON("data/city_neigs_lats.json", function(json) {
 	city_neigs_lats = json;
-    console.log(city_neigs_lats[0]); // this will show the info it in firebug console
+//    console.log(city_neigs_lats[0]); // this will show the info it in firebug console
 });
 
 
 var city_neigs_lngs;
 $.getJSON("data/city_neigs_lngs.json", function(json) {
 	city_neigs_lngs = json;
-    console.log(city_neigs_lngs[0]); // this will show the info it in firebug console
+//    console.log(city_neigs_lngs[0]); // this will show the info it in firebug console
 });
 
 
@@ -153,7 +153,7 @@ lats = city_neigs_lats[cityid]
 neigs_names  =city_neigs_names[cityid]
 
 
-console.log(lats);
+//console.log(lats);
 
 mymap0.setView( [lats[0], lngs[0]], 12.1);
 mymap1.setView( [lats[1], lngs[1]], 12.1);

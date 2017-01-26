@@ -204,6 +204,7 @@ mymap14.setView( [lats[14], lngs[14]], 12.1);
 function change_zoom(){
 
 ZoomVal = document.getElementById("ZoomVal").value;
+console.log(ZoomVal);
 
 mymap0.setZoom(ZoomVal);
 mymap1.setZoom(ZoomVal);

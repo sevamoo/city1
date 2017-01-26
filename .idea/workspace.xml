@@ -26,11 +26,11 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7220497">
-              <caret line="203" column="9" selection-start-line="203" selection-start-column="9" selection-end-line="203" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.32453415">
+              <caret line="206" column="21" selection-start-line="206" selection-start-column="21" selection-end-line="206" selection-end-column="21" />
               <folding>
-                <element signature="e#0#5725#0" expanded="false" />
-                <element signature="e#0#5725#0" expanded="false" />
+                <element signature="e#0#5747#0" expanded="false" />
+                <element signature="e#0#5747#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -337,11 +337,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7220497">
-          <caret line="203" column="9" selection-start-line="203" selection-start-column="9" selection-end-line="203" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.32453415">
+          <caret line="206" column="21" selection-start-line="206" selection-start-column="21" selection-end-line="206" selection-end-column="21" />
           <folding>
-            <element signature="e#0#5725#0" expanded="false" />
-            <element signature="e#0#5725#0" expanded="false" />
+            <element signature="e#0#5747#0" expanded="false" />
+            <element signature="e#0#5747#0" expanded="false" />
           </folding>
         </state>
       </provider>

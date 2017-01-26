@@ -46,9 +46,8 @@ var lngs = {"0":-159.5872222,"1":-104.4644112,"2":-99.4415007,"3":-101.7526723,"
 		maxZoom: 18,
 
 	}).addTo(mymap0);
-// var credits = L.control.attribution().removeAttribution('Leaflet').addTo(mymap0);
-// credits.addAttribution('© <a' );
-// credits.removeAttribution('Leaflet');
+	attribution = mymap1.attributionControl;
+	attribution.setPrefix('');
 
 	var mymap1 = L.map('mapid1').setView([lats[1], lngs[1]], zoominit);
 

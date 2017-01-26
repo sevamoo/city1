@@ -32,9 +32,9 @@ $.getJSON("data/city_neigs_lngs.json", function(json) {
 
 
 cityid = document.getElementById("cityname").value;
-console.log(cityid)
+console.log(cityid);
 
-
+console.log(city_neigs_lngs[0]);
 lngs = city_neigs_lngs[cityid]
 lats = city_neigs_lats[cityid]
 

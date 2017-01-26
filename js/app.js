@@ -19,7 +19,7 @@ $.getJSON("data/city_neigs_names.json", function(json) {
 
 var city_neigs_lats;
 $.getJSON("data/city_neigs_lats.json", function(json) {
-	city_neigs_lngs = json;
+	city_neigs_lats = json;
 //    console.log(city_neigs_lats[0]); // this will show the info it in firebug console
 });
 
@@ -36,7 +36,7 @@ console.log(cityid)
 
 
 lngs = city_neigs_lngs[cityid]
-lats = city_neigs_lngs[cityid]
+lats = city_neigs_lats[cityid]
 
 	var mymap0 = L.map('mapid0').setView([lats[0], lngs[0]], zoominit);
 

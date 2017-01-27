@@ -60,16 +60,16 @@ $.getJSON("data/city_neigs_lngs.json", function(json) {
 
 var cityid = document.getElementById("cityname").value;
 var names_init = {"0":"Eleele United States","1":"Kiowa United States","2":"Highmore United States","3":"Tribune United States","4":"Luxora United States","5":"Faulkton United States","6":"Vinalhaven United States","7":"Levan United States","8":"Wauneta United States","9":"Bird Island United States","10":"Onyx United States","11":"Weatherly United States","12":"Alma Center United States","13":"Scobey United States","14":"Soper United States","15":"Yatesville United States","16":"Mescalero United States","17":"Waitsburg United States","18":"Ekalaka United States","19":"Emmet United States","20":"Enosburg Falls United States","21":"Stanberry United States","22":"Lake Preston United States","23":"West Yellowstone United States","24":"Blandinsville United States","25":"Lockesburg United States","26":"Fordville United States"}
-document.getElementById("city0").innerHTML = '<font size="1">'+names_init[0]+'/font>';
-document.getElementById("city1").innerHTML = '<font size="1">'+names_init[1]+'/font>';
-document.getElementById("city2").innerHTML = '<font size="1">'+names_init[2]+'/font>';
-document.getElementById("city3").innerHTML = '<font size="1">'+names_init[3]+'/font>';
-document.getElementById("city4").innerHTML = '<font size="1">'+names_init[4]+'/font>';
-document.getElementById("city5").innerHTML = '<font size="1">'+names_init[5]+'/font>';
-document.getElementById("city6").innerHTML = '<font size="1">'+names_init[6]+'/font>';
-document.getElementById("city7").innerHTML = '<font size="1">'+names_init[7]+'/font>';
-document.getElementById("city8").innerHTML = '<font size="1">'+names_init[8]+'/font>';
-//document.getElementById("city9").innerHTML = '<font size="1">'+names_init[9]+'/font>';
+document.getElementById("city0").innerHTML = '<font size="1">'+names_init[0]+'</font>';
+document.getElementById("city1").innerHTML = '<font size="1">'+names_init[1]+'</font>';
+document.getElementById("city2").innerHTML = '<font size="1">'+names_init[2]+'</font>';
+document.getElementById("city3").innerHTML = '<font size="1">'+names_init[3]+'</font>';
+document.getElementById("city4").innerHTML = '<font size="1">'+names_init[4]+'</font>';
+document.getElementById("city5").innerHTML = '<font size="1">'+names_init[5]+'</font>';
+document.getElementById("city6").innerHTML = '<font size="1">'+names_init[6]+'</font>';
+document.getElementById("city7").innerHTML = '<font size="1">'+names_init[7]+'</font>';
+document.getElementById("city8").innerHTML = '<font size="1">'+names_init[8]+'</font>';
+//document.getElementById("city9").innerHTML = '<font size="1">'+names_init[9]+'</font>';
 
 
 
@@ -474,6 +474,18 @@ function find_similar_cities(){
 cityid = document.getElementById("cityname").value;
 //console.log(cityid,citynames[cityid])
 //mymap14 = L.map('mapid14').setView([51.505, -0.09], 10);
+
+var names_init = city_neigs_names[cityid];
+document.getElementById("city0").innerHTML = '<font size="1">'+names_init[0]+'</font>';
+document.getElementById("city1").innerHTML = '<font size="1">'+names_init[1]+'</font>';
+document.getElementById("city2").innerHTML = '<font size="1">'+names_init[2]+'</font>';
+document.getElementById("city3").innerHTML = '<font size="1">'+names_init[3]+'</font>';
+document.getElementById("city4").innerHTML = '<font size="1">'+names_init[4]+'</font>';
+document.getElementById("city5").innerHTML = '<font size="1">'+names_init[5]+'</font>';
+document.getElementById("city6").innerHTML = '<font size="1">'+names_init[6]+'</font>';
+document.getElementById("city7").innerHTML = '<font size="1">'+names_init[7]+'</font>';
+document.getElementById("city8").innerHTML = '<font size="1">'+names_init[8]+'</font>';
+
 
 lngs = city_neigs_lngs[cityid]
 lats = city_neigs_lats[cityid]

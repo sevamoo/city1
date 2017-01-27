@@ -10,11 +10,12 @@
 
 	<link rel="shortcut icon" type="image/x-icon" href="http://leafletjs.com/examples/quick-start/docs/images/favicon.ico">
 
-	<link rel="stylesheet" href="./css/leaflet.css">
+	<link rel="stylesheet" href="css/leaflet.css">
 
     <!-- Bootstrap Core CSS -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+<   <link rel="stylesheet" href="css/app.css">
+  	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
 	 <!-- Custom CSS -->
     <link href="css/full-slider.css" rel="stylesheet">
@@ -96,43 +97,38 @@ input:required:hover {
 
 
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">SimCityFinder</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-
-
-                    <li>
-                        <a href="#" id="about-btn">About</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <div class="navbar-icon-container">
+            <a href="#" class="navbar-icon pull-right visible-xs" id="nav-btn"><i class="fa fa-bars fa-lg white"></i></a>
+            <a href="#" class="navbar-icon pull-right visible-xs" id="sidebar-toggle-btn"><i class="fa fa-search fa-lg white"></i></a>
+          </div>
+          <a class="navbar-brand" href="#">SimCityFinder</a>
         </div>
-        <!-- /.container -->
-    </nav>
+        <div class="navbar-collapse collapse">
+          <!--<form class="navbar-form navbar-right" role="search">-->
+          <!--  <div class="form-group has-feedback">-->
+          <!--      <input id="searchbox" type="text" placeholder="Search" class="form-control">-->
+          <!--      <span id="searchicon" class="fa fa-search form-control-feedback"></span>-->
+          <!--  </div>-->
+          <!--</form>-->
+          <ul class="nav navbar-nav">
+            <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" id="about-btn"><i class="fa fa-question-circle white"></i>&nbsp;&nbsp;About</a></li>
+
+          </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+</div>
 
 
 <!-- Page Content -->
-    <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog">
+ <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
             <button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title">Welcome to FairyFy!</h4>
+            <h4 class="modal-title">Welcome to Rea$tLand !</h4>
           </div>
           <div class="modal-body">
             <ul class="nav nav-tabs nav-justified" id="aboutTabs">
@@ -151,9 +147,9 @@ input:required:hover {
             </ul>
             <div class="tab-content" id="aboutTabsContent">
               <div class="tab-pane fade active in" id="about">
-                <!--<p>An application for spatial search of the rental and sale listings in Switzerland.</p>-->
+                <p>An application for spatial search of the rental and sale listings in Switzerland.</p>
                 <p>Developed by <a href="http://www.vahidmoosavi.com/" target="_blank">Vahid Moosavi</a> at the <a href="http://caad.arch.ethz.ch/" target="_blank">Chair for Computer Aided Architectural Design (CAAD), ETH Zürich</a>.</p>
-                <!--<p>Based on open source package <a href="https://github.com/bmcbride/bootleaf" target="_blank">BootLeaf</a>.</p>-->
+                <p>Based on open source package <a href="https://github.com/bmcbride/bootleaf" target="_blank">BootLeaf</a>.</p>
 
                 <div class="panel panel-primary">
                   <!--<div class="panel-heading">Features</div>-->
@@ -223,6 +219,7 @@ input:required:hover {
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
+
 
     <h1><br></h1>
 
@@ -1333,7 +1330,7 @@ input:required:hover {
 
 <script src="js/app.js"></script>
 
-     <script>
+    <script>
     	$("#about-btn").click(function() {
   $("#aboutModal").modal("show");
   $(".navbar-collapse.in").collapse("hide");

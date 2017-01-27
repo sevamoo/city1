@@ -476,7 +476,7 @@ cityid = document.getElementById("cityname").value;
 //mymap14 = L.map('mapid14').setView([51.505, -0.09], 10);
 
 var names_init = city_neigs_names[cityid];
-document.getElementById("city0").innerHTML = '<font size="1">'+names_init[0]+'</font>';
+document.getElementById("city0").innerHTML = names_init[0];
 document.getElementById("city1").innerHTML = '<font size="1">'+names_init[1]+'</font>';
 document.getElementById("city2").innerHTML = '<font size="1">'+names_init[2]+'</font>';
 document.getElementById("city3").innerHTML = '<font size="1">'+names_init[3]+'</font>';

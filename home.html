@@ -3,39 +3,34 @@
 
 <head>
 
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TSJ7T5B');</script>
+<!-- End Google Tag Manager -->
 
+<meta name="google-site-verification" content="9xLYPPbVVVHZpxSBeVkxRVFz1sc1RUA37ZQ0m0FSPWc" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SimCityFinder</title>
+    <title>FairyFy</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="./css/full-slider.css" rel="stylesheet">
-
-    <link rel="shortcut icon" type="image/x-icon" href="http://leafletjs.com/examples/quick-start/docs/images/favicon.ico">
-
-	<link rel="stylesheet" href="./css/leaflet.css">
-
-    <!-- Bootstrap Core CSS -->
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
-
-
-	 <!-- Custom CSS -->
     <link href="css/full-slider.css" rel="stylesheet">
-
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-
 
     <![endif]-->
   <style>
@@ -104,69 +99,6 @@ input:required:focus {
 input:required:hover {
   opacity: 1;
 }
-
-
-.center {
-    text-align: center;
-
-}
-      .form-group {
-    margin: auto;
-    width: 60%;
-    border: 1px  steelblue;
-    padding: 10px;
-}
-
-input[type=range]{
-    -webkit-appearance: none;
-}
-
-input[type=range]::-webkit-slider-runnable-track {
-    width: 300px;
-    height: 5px;
-	background: #ddd;
-    border: none;
-    <!--background: 3f91e5;;-->
-    <!--border: steelblue;-->
-    border-radius: 3px;
-}
-
-input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    border: none;
-    height: 16px;
-    width: 16px;
-    border-radius: 50%;
-    background: goldenrod;
-    margin-top: -4px;
-}
-
-input[type=range]:focus {
-    outline: none;
-}
-
-		/* style all input elements with a required attribute */
-input:required {
-  box-shadow: 4px 4px 5px goldenrod;
-}
-
-/**
- * style input elements that have a required
- * attribute and a focus state
- */
-input:required:focus {
-  border: 1px solid red;
-  outline: none;
-}
-
-/**
- * style input elements that have a required
- * attribute and a hover state
- */
-input:required:hover {
-  opacity: 1;
-}
-
 </style>
 </head>
 
@@ -225,10 +157,134 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h4>Please fill in the following information about your property</h4>
 
 </div>
+	<div class="row" style="margin-top:20px">
+		<div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+			<form role="form">
+				<fieldset>
+
+				<hr class="colorgraph">
+				<div class="form-group">
+                  <label for="RENTORSALE">Price For </label>
+                  <select class="form-control" id="RENTORSALE" required="required" style="width:180px">
+                  	<option value="rent">Rent</option>
+                        <!--<option value="sale">Sale</option>-->
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="itemType">Type of Property</label>
+                  <select class="form-control" id="itemType" stroke="blue" required="required" style="width:180px">
+                  	<option value="Apartment">Apartment</option>
+                        <option value="Single_House">Single House</option>
+                        <option value="Flat">Flat</option>
+                        <option value="Attic">Attic Flat</option>
+                    <option value="Duplex">Duplex</option>
+                    <option value="Studio">Studio</option>
+                  </select>
+                  <!--<input type="text" class="form-control" id="itemType" style="width:180px">-->
+                </div>
 
 
+                 <div class="form-group">
+
+                  <label>City</label><input type="text" class="form-control" id="Cityname" placeholder="Town or city" stroke="blue" required="required" style="width:180px">
+                </div>
+
+                <div class="form-group">
+                  <label>Zip code</label>
+                  <input type="text" class="form-control" id="ZIP" placeholder="Zip code" required="required" stroke="blue" style="width:180px">
+                </div>
+
+                <div class="form-group">
+                  <label>Address</label>
+                  <input type="text" class="form-control" id="itemAdress1" placeholder="Address line 1" stroke="blue" required="required" style="width:180px">
+                  <input type="text" class="form-control" id="itemAdress2" placeholder="Address line 2" stroke="blue" style="width:180px">
+                  <input type="text" class="form-control" id="itemAdress3" placeholder="Address line 3" stroke="blue" style="width:180px">
+                </div>
+
+
+
+                <!--<div class="form-group">-->
+                  <!--<label>No. of Rooms</label>-->
+                  <!--<input type="number" class="form-control" id="itemRooms" min="1" max="20" stroke="blue" style="width:180px">-->
+                  <!--&lt;!&ndash;<input type="number" id="rowsize" min="2" max="200" style="width:50px" value="30" stroke="blue">&ndash;&gt;-->
+                <!--</div>-->
+				<div class="form-group">
+					<label  for="itemRoomsVal" >No. of Rooms</label>
+					 <output for="itemRoomsVal" id="itemRoomsVal">1</output>
+					 <input class="form-control" type="range" id="itemRooms" value="1" min="1" max="20" step=".5" required="required" onchange="update_vals()">
+                </div>
+
+                <!--<div class="form-group">-->
+                  <!--<label>Which Floor</label>-->
+                  <!--<input type="number" class="form-control" id="itemFloor"  min="0" max="50" stroke="blue" style="width:180px">-->
+                <!--</div>-->
+				<!-- -->
+				<div class="form-group">
+					<label  for="itemFloorVal" >Which Floor</label>
+					 <output for="itemFloorVal" id="itemFloorVal">1</output>
+					 <input class="form-control" type="range" id="itemFloor" value="1" min="-1" max="20" step="1" required="required" onchange="update_vals()">
+                </div>
+                <!--<div class="form-group">-->
+                  <!--<label>Living space (sq.M)</label>-->
+                  <!--<input type="number" class="form-control" id="itemLiving_space" min="10" max="1000" stroke="blue"style="width:180px">-->
+                <!--</div>-->
+
+				<div class="form-group">
+					<label  for="itemLiving_spaceVal" >Living space (sq.M)</label>
+					 <output for="itemLiving_spaceVal" id="itemLiving_spaceVal">50</output>
+					 <input class="form-control" type="range" id="itemLiving_space" value="50" min="10" max="1000" step="1" required="required" onchange="update_vals()">
+                </div>
+
+                <!--<div class="form-group">-->
+                  <!--<label>Year built</label>-->
+                  <!--<input type="number" class="form-control" id="itemYear_built" min="1400" max="2018" stroke="blue" style="width:180px">-->
+                <!--</div>-->
+
+				<div class="form-group">
+					<label  for="itemYear_builtVal" >Year built</label>
+					 <output for="itemYear_builtVal" id="itemYear_builtVal">2000</output>
+					 <input class="form-control" type="range" id="itemYear_built" value="2000" min="1400" max="2017" step="1" required="required" onchange="update_vals()">
+                </div>
+
+                <!--<div class="form-group">-->
+                  <!--<label>Last renovation</label>-->
+                  <!--<input type="number" class="form-control" id="itemLast_renovation" min="1950" max="2016" stroke="blue" style="width:180px">-->
+                <!--</div>-->
+					<div class="form-group">
+					<label  for="itemLast_renovationVal" >Last renovation</label>
+					 <output for="itemLast_renovationVal" id="itemLast_renovationVal">2000</output>
+					 <input class="form-control" type="range" id="itemLast_renovation" value="2000" min="1950" max="2017" step="1" required="required" onchange="update_vals()">
+                </div>
+
+
+
+
+				<!--<hr class="colorgraph">-->
+				<!--<div class="row">-->
+					<div class="form-group">
+						<!--<input type="submit" class="btn btn-lg btn-success btn-block" value="Sign In">-->
+						<a class="btn btn-success btn-lg" style="width:180px" font-size="4" onclick="predict_rent()" >Estimate</a>
+                      <!--<button href="#" class="btn btn-primary" onclick="train_SOM()" role="button"><font size="1.">Train SOM</font> </button>-->
+					</div>
+
+					<div class="form-group">
+                  <label>Estimated Results</label>
+                  <input type="text" class="form-control" id="analysisresultstext"  style="width:260px">
+                </div>
+
+				<!--</div>-->
+
+				</fieldset>
+			</form>
+
+
+
+		</div>
+	</div>
 </div>
-
+<p><div id="Rentchart"></div></p>
+<div id="map"></div>
 
 
     <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog">
@@ -328,16 +384,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
-<!--<script src="./js/leaflet.js"></script>-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
 
     <!-- jQuery -->
-    <script src="./js/jquery.js"></script>
+    <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="./js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
     <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+	<script src="static/colorbrewer.min.js"></script>
+    <script src="static/fairify_app.js"></script>
 
        <script>
     	$("#about-btn").click(function() {
@@ -347,16 +403,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 });
     </script>
 
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>-->
-<script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
-
-<!--<script src="js/app.js"></script>-->
-
-
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
 
 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89352903-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 
 </body>
 

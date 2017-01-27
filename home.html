@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-	<title>City Finder</title>
 
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-	<link rel="shortcut icon" type="image/x-icon" href="http://leafletjs.com/examples/quick-start/docs/images/favicon.ico">
-
-	<link rel="stylesheet" href="css/leaflet.css">
+    <title>SimCityFinder</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-<   <link rel="stylesheet" href="css/app.css">
-  	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-	 <!-- Custom CSS -->
+    <!-- Custom CSS -->
     <link href="css/full-slider.css" rel="stylesheet">
 
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 
-	    <style>
+    <![endif]-->
+  <style>
 
-
+.bar rect {
+  fill: steelblue;
+}
 
 .center {
     text-align: center;
@@ -36,14 +42,14 @@
     padding: 10px;
 }
 
-input[type=range]{
+		input[type=range]{
     -webkit-appearance: none;
 }
 
 input[type=range]::-webkit-slider-runnable-track {
     width: 300px;
     height: 5px;
-	background: #ddd;
+		background: #ddd;
     border: none;
     <!--background: 3f91e5;;-->
     <!--border: steelblue;-->
@@ -64,7 +70,7 @@ input[type=range]:focus {
     outline: none;
 }
 
-		/* style all input elements with a required attribute */
+/* style all input elements with a required attribute */
 input:required {
   box-shadow: 4px 4px 5px goldenrod;
 }
@@ -85,1140 +91,200 @@ input:required:focus {
 input:required:hover {
   opacity: 1;
 }
-
-
-
 </style>
-
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 </head>
+
 <body>
 
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TSJ7T5B"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">FairyFy</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/fairyfy">Price Estimation</a>
+                    </li>
+                    <li>
+                        <a href="/supply_analysis">Market Analysis</a>
+                    </li>
+                    <li>
+                        <a href="/map">Maps</a>
+                    </li>
 
 
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <div class="navbar-icon-container">
-            <a href="#" class="navbar-icon pull-right visible-xs" id="nav-btn"><i class="fa fa-bars fa-lg white"></i></a>
-            <a href="#" class="navbar-icon pull-right visible-xs" id="sidebar-toggle-btn"><i class="fa fa-search fa-lg white"></i></a>
-          </div>
-          <a class="navbar-brand" href="#">SimCityFinder</a>
+                    <li>
+                        <a href="#" id="about-btn">About</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-        <div class="navbar-collapse collapse">
-          
-          <ul class="nav navbar-nav">
-            <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" id="about-btn"><i class="fa fa-question-circle white"></i>&nbsp;&nbsp;About</a></li>
-
-          </ul>
-        </div><!--/.navbar-collapse -->
-      </div>
-</div>
+        <!-- /.container -->
+    </nav>
 
 
-
+    <!-- Page Content -->
 
 
 <div class="container">
-    <h1><br></h1>
+  <div class="center">
+    <h1><br><br><br></h1>
+  <h1>Rental Price Estimation</h1>
+  <h4>Please fill in the following information about your property</h4>
 
-
-<table class="columns" align="center">
-      <tr>
-		<!--<td><h1>Row1</h1></td>-->
-        <td><div id="mapid0" style="width: 100px; height: 100px; position: relative;" align="center" display="block"  margin="0  auto" style=" border: 2.1px   steelblue"></div></td>
-        <td><div id="mapid1" style="width: 100px; height: 100px; position: relative;" align="center" display="block"  margin="0  auto" style=" border: 2.1px   steelblue"></div></td>
-		<td><div id="mapid2" style="width: 100px; height: 100px; position: relative;" align="center" display="block"  margin="0  auto" style=" border: 2.1px   steelblue"></div></td>
-		<td><div id="mapid3" style="width: 100px; height: 100px; position: relative;" align="center" display="block"  margin="0  auto" style=" border: 2.1px   steelblue"></div></td>
-		<td><div id="mapid4" style="width: 100px; height: 100px; position: relative;" align="center" display="block"  margin="0  auto" style=" border: 2.1px   steelblue"></div></td>
-
-  </tr>
-</table>
-
-<table class="columns" align="center">
-      <tr>
-		<!--<td><h1>Row2</h1></td>-->
-
-        <td><div id="mapid5" style="width: 100px; height: 100px; position: relative;" align="center" display="block"  margin="0  auto" style=" border: .1px   steelblue"></div></td>
-        <td><div id="mapid6" style="width: 100px; height: 100px; position: relative;" align="center" display="block"  margin="0  auto" style=" border: .1px   steelblue"></div></td>
-		<td><div id="mapid7" style="width: 100px; height: 100px; position: relative;" align="center" display="block"  margin="0  auto" style=" border: .1px   steelblue"></div></td>
-		<td><div id="mapid8" style="width: 100px; height: 100px; position: relative;" align="center" display="block"  margin="0  auto" style=" border: .1px   steelblue"></div></td>
-		<td><div id="mapid9" style="width: 100px; height: 100px; position: relative;" align="center" display="block"  margin="0  auto" style=" border: .1px   steelblue"></div></td>
-
-  </tr>
-</table>
-
-<table class="columns" align="center">
-      <tr>
-		<!--<td><h1>Row3</h1></td>-->
-
-        <td><div id="mapid10" style="width: 100px; height: 100px; position: relative;" align="center" display="block"  margin="0  auto" style=" border: .1px   steelblue"></div></td>
-        <td><div id="mapid11" style="width: 100px; height: 100px; position: relative;" align="center" display="block"  margin="0  auto" style=" border: .1px   steelblue"></div></td>
-		<td><div id="mapid12" style="width: 100px; height: 100px; position: relative;" align="center" display="block"  margin="0  auto" style=" border: .1px   steelblue"></div></td>
-		<td><div id="mapid13" style="width: 100px; height: 100px; position: relative;" align="center" display="block"  margin="0  auto" style=" border: .1px   steelblue"></div></td>
-		<td><div id="mapid14" style="width: 100px; height: 100px; position: relative;" align="center" display="block"  margin="0  auto" style=" border: .1px   steelblue"></div></td>
-
-  </tr>
-</table>
-
-<div class="row" style="margin-top:20px">
+</div>
+	<div class="row" style="margin-top:20px">
 		<div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
 			<form role="form">
 				<fieldset>
 
+				<hr class="colorgraph">
 				<div class="form-group">
-                  <label for="cityname">Select A City </label>
-                  <select class="form-control" id="cityname" required="required" style="width:180px">
-
-<option value="1">Eleele United States</option>
-<option value="2">Ewa Beach United States</option>
-<option value="3">Abbeville United States</option>
-<option value="4">Abbotsford United States</option>
-<option value="5">Abbott United States</option>
-<option value="6">Abbottstown United States</option>
-<option value="7">Aberdeen  SD United States</option>
-<option value="8">Aberdeen  WA United States</option>
-<option value="9">Abernathy United States</option>
-<option value="10">Abilene  TX United States</option>
-<option value="11">Abingdon  MD United States</option>
-<option value="12">Abingdon United States</option>
-<option value="13">Abington Township United States</option>
-<option value="14">Abita Springs United States</option>
-<option value="15">Abrams United States</option>
-<option value="16">Absarokee United States</option>
-<option value="17">Absecon United States</option>
-<option value="18">Accident United States</option>
-<option value="19">Accokeek United States</option>
-<option value="20">Accomac United States</option>
-<option value="21">Accord United States</option>
-<option value="22">Accoville United States</option>
-<option value="23">Achille United States</option>
-<option value="24">Ackerly United States</option>
-<option value="25">Ackerman United States</option>
-<option value="26">Ackley United States</option>
-<option value="27">Acton United States</option>
-<option value="28">Acushnet United States</option>
-<option value="29">Acworth United States</option>
-<option value="30">Ada United States</option>
-<option value="31">Adair United States</option>
-<option value="32">Adairsville United States</option>
-<option value="33">Adairville United States</option>
-<option value="34">Adak United States</option>
-<option value="35">Adams Center United States</option>
-<option value="36">Adams United States</option>
-<option value="37">Adamstown United States</option>
-<option value="38">Adamsville United States</option>
-<option value="39">Addieville United States</option>
-<option value="40">Addis United States</option>
-<option value="41">Addison United States</option>
-<option value="42">Addyston United States</option>
-<option value="43">Adel United States</option>
-<option value="44">Adelanto United States</option>
-<option value="45">Adell United States</option>
-<option value="46">Adena United States</option>
-<option value="47">Adger United States</option>
-<option value="48">Adin United States</option>
-<option value="49">Admire United States</option>
-<option value="50">Adona United States</option>
-<option value="51">Adrian  MI United States</option>
-<option value="52">Advance United States</option>
-<option value="53">Afton United States</option>
-<option value="54">Agar United States</option>
-<option value="55">Agate United States</option>
-<option value="56">Agawam United States</option>
-<option value="57">Agoura Hills United States</option>
-<option value="58">Agra United States</option>
-<option value="59">Aguanga United States</option>
-<option value="60">Ahoskie United States</option>
-<option value="61">Ahwahnee United States</option>
-<option value="62">Aiken United States</option>
-<option value="63">Ailey United States</option>
-<option value="64">Ainsworth United States</option>
-<option value="65">Airway Heights United States</option>
-<option value="66">Aitkin United States</option>
-<option value="67">Ajo United States</option>
-<option value="68">Akaska United States</option>
-<option value="69">Akeley United States</option>
-<option value="70">Akhiok United States</option>
-<option value="71">Akiachak United States</option>
-<option value="72">Akiak United States</option>
-<option value="73">Akron  OH United States</option>
-<option value="74">Alabaster United States</option>
-<option value="75">Alachua United States</option>
-<option value="76">Alakanuk United States</option>
-<option value="77">Alamance United States</option>
-<option value="78">Alameda United States</option>
-<option value="79">Alamo United States</option>
-<option value="80">Alamogordo United States</option>
-<option value="81">Alamosa United States</option>
-<option value="82">Alanson United States</option>
-<option value="83">Alapaha United States</option>
-<option value="84">Alba United States</option>
-<option value="85">Albany  GA United States</option>
-<option value="86">Albany  NY United States</option>
-<option value="87">Albemarle United States</option>
-<option value="88">Albers United States</option>
-<option value="89">Albert City United States</option>
-<option value="90">Albert Lea  MN United States</option>
-<option value="91">Alberton United States</option>
-<option value="92">Albertson United States</option>
-<option value="93">Albertville United States</option>
-<option value="94">Albia United States</option>
-<option value="95">Albin United States</option>
-<option value="96">Albion United States</option>
-<option value="97">Alborn United States</option>
-<option value="98">Albright United States</option>
-<option value="99">Albuquerque  NM United States</option>
-<option value="100">Alburg United States</option>
-<option value="101">Alburnett United States</option>
-<option value="102">Alburtis United States</option>
-<option value="103">Alcalde United States</option>
-<option value="104">Alcester United States</option>
-<option value="105">Alcoa United States</option>
-<option value="106">Alcolu United States</option>
-<option value="107">Alda United States</option>
-<option value="108">Alden United States</option>
-<option value="109">Alderpoint United States</option>
-<option value="110">Alderson United States</option>
-<option value="111">Aldie United States</option>
-<option value="112">Aldrich United States</option>
-<option value="113">Aledo United States</option>
-<option value="114">Alex United States</option>
-<option value="115">Alexander City United States</option>
-<option value="116">Alexander United States</option>
-<option value="117">Alexandria  MN United States</option>
-<option value="118">Alexandria  VA United States</option>
-<option value="119">Alexandria Bay United States</option>
-<option value="120">Alexis United States</option>
-<option value="121">Alford United States</option>
-<option value="122">Alfred United States</option>
-<option value="123">Alger United States</option>
-<option value="124">Algodones United States</option>
-<option value="125">Algoma United States</option>
-<option value="126">Algona United States</option>
-<option value="127">Algonac United States</option>
-<option value="128">Algonquin United States</option>
-<option value="129">Alhambra United States</option>
-<option value="130">Alice United States</option>
-<option value="131">Aliceville United States</option>
-<option value="132">Aline United States</option>
-<option value="133">Aliquippa United States</option>
-<option value="134">Aliso Viejo United States</option>
-<option value="135">Allamuchy United States</option>
-<option value="136">Allardt United States</option>
-<option value="137">Allegan United States</option>
-<option value="138">Allegany United States</option>
-<option value="139">Allen  TX United States</option>
-<option value="140">Allen Park United States</option>
-<option value="141">Allendale United States</option>
-<option value="142">Allenhurst United States</option>
-<option value="143">Allenport United States</option>
-<option value="144">Allenspark United States</option>
-<option value="145">Allenton United States</option>
-<option value="146">Allentown  PA United States</option>
-<option value="147">Allerton United States</option>
-<option value="148">Alliance United States</option>
-<option value="149">Allison Park United States</option>
-<option value="150">Allison United States</option>
-<option value="151">Alloway United States</option>
-<option value="152">Allston United States</option>
-<option value="153">Allyn United States</option>
-<option value="154">Alma Center United States</option>
-<option value="155">Alma United States</option>
-<option value="156">Almena United States</option>
-<option value="157">Almira United States</option>
-<option value="158">Almo United States</option>
-<option value="159">Alna United States</option>
-<option value="160">Alpaugh United States</option>
-<option value="161">Alpena  MI United States</option>
-<option value="162">Alpha United States</option>
-<option value="163">Alpharetta  GA United States</option>
-<option value="164">Alpine United States</option>
-<option value="165">Alsea United States</option>
-<option value="166">Alsey United States</option>
-<option value="167">Alsip United States</option>
-<option value="168">Alstead United States</option>
-<option value="169">Alta United States</option>
-<option value="170">Alta Vista United States</option>
-<option value="171">Altadena United States</option>
-<option value="172">Altamont United States</option>
-<option value="173">Altamonte Springs United States</option>
-<option value="174">Altaville United States</option>
-<option value="175">Altavista United States</option>
-<option value="176">Altenburg United States</option>
-<option value="177">Altha United States</option>
-<option value="178">Altmar United States</option>
-<option value="179">Alto United States</option>
-<option value="180">Alton  IL United States</option>
-<option value="181">Alton Bay United States</option>
-<option value="182">Altona United States</option>
-<option value="183">Altoona United States</option>
-<option value="184">Altura United States</option>
-<option value="185">Alturas United States</option>
-<option value="186">Altus United States</option>
-<option value="187">Alum Creek United States</option>
-<option value="188">Alva United States</option>
-<option value="189">Alvada United States</option>
-<option value="190">Alvarado United States</option>
-<option value="191">Alverda United States</option>
-<option value="192">Alvin United States</option>
-<option value="193">Alviso United States</option>
-<option value="194">Alvo United States</option>
-<option value="195">Alvord United States</option>
-<option value="196">Alvordton United States</option>
-<option value="197">Ama United States</option>
-<option value="198">Amagansett United States</option>
-<option value="199">Amana United States</option>
-<option value="200">Amanda United States</option>
-<option value="201">Amargosa Valley United States</option>
-<option value="202">Amarillo  TX United States</option>
-<option value="203">Amawalk United States</option>
-<option value="204">Amazonia United States</option>
-<option value="205">Amberg United States</option>
-<option value="206">Ambler United States</option>
-<option value="207">Ambridge United States</option>
-<option value="208">Ambrose United States</option>
-<option value="209">Amelia Court House United States</option>
-<option value="210">Amelia United States</option>
-<option value="211">Amenia United States</option>
-<option value="212">American Canyon United States</option>
-<option value="213">American Falls United States</option>
-<option value="214">American Fork United States</option>
-<option value="215">Americus United States</option>
-<option value="216">Amery United States</option>
-<option value="217">Ames  IA United States</option>
-<option value="218">Amesbury United States</option>
-<option value="219">Amesville United States</option>
-<option value="220">Amherst Junction United States</option>
-<option value="221">Amherst United States</option>
-<option value="222">Amherstdale United States</option>
-<option value="223">Amidon United States</option>
-<option value="224">Amite United States</option>
-<option value="225">Amity United States</option>
-<option value="226">Amityville United States</option>
-<option value="227">Ammon United States</option>
-<option value="228">Amo United States</option>
-<option value="229">Amoret United States</option>
-<option value="230">Amory United States</option>
-<option value="231">Amsterdam United States</option>
-<option value="232">Amston United States</option>
-<option value="233">Anacoco United States</option>
-<option value="234">Anaconda United States</option>
-<option value="235">Anacortes United States</option>
-<option value="236">Anadarko United States</option>
-<option value="237">Anaheim  CA United States</option>
-<option value="238">Anahola United States</option>
-<option value="239">Anahuac United States</option>
-<option value="240">Anamosa United States</option>
-<option value="241">Anchor Point United States</option>
-<option value="242">Anchorage  AK United States</option>
-<option value="243">Ancona United States</option>
-<option value="244">Andale United States</option>
-<option value="245">Andalusia United States</option>
-<option value="246">Anderson  SC United States</option>
-<option value="247">Andes United States</option>
-<option value="248">Andover United States</option>
-<option value="249">Andrew United States</option>
-<option value="250">Andrews Air Force Base United States</option>
-<option value="251">Andrews United States</option>
-<option value="252">Angel Fire United States</option>
-<option value="253">Angelica United States</option>
-<option value="254">Angie United States</option>
-<option value="255">Angier United States</option>
-<option value="256">Angle Inlet United States</option>
-<option value="257">Angleton United States</option>
-<option value="258">Angola United States</option>
-<option value="259">Angoon United States</option>
-<option value="260">Angora United States</option>
-<option value="261">Anguilla United States</option>
-<option value="262">Angwin United States</option>
-<option value="263">Animas United States</option>
-<option value="264">Anita United States</option>
-<option value="265">Aniwa United States</option>
-<option value="266">Ankeny United States</option>
-<option value="267">Anmoore United States</option>
-<option value="268">Ann Arbor  MI United States</option>
-<option value="269">Anna United States</option>
-<option value="270">Annabella United States</option>
-<option value="271">Annandale United States</option>
-<option value="272">AnnandaleonHudson United States</option>
-<option value="273">Annapolis  MD United States</option>
-<option value="274">Annawan United States</option>
-<option value="275">Anniston United States</option>
-<option value="276">Annona United States</option>
-<option value="277">Annville United States</option>
-<option value="278">Anoka United States</option>
-<option value="279">Anselmo United States</option>
-<option value="280">Ansley United States</option>
-<option value="281">Anson United States</option>
-<option value="282">Ansonia United States</option>
-<option value="283">Ansted United States</option>
-<option value="284">Antelope United States</option>
-<option value="285">Anthem United States</option>
-<option value="286">Anthon United States</option>
-<option value="287">Anthony United States</option>
-<option value="288">Antigo United States</option>
-<option value="289">Antioch United States</option>
-<option value="290">Antlers United States</option>
-<option value="291">Antrim United States</option>
-<option value="292">Antwerp United States</option>
-<option value="293">Anza United States</option>
-<option value="294">Apache Junction United States</option>
-<option value="295">Apache United States</option>
-<option value="296">Apalachicola United States</option>
-<option value="297">Apalachin United States</option>
-<option value="298">Apex United States</option>
-<option value="299">Aplington United States</option>
-<option value="300">Apollo Beach United States</option>
-<option value="301">Apollo United States</option>
-<option value="302">Apopka United States</option>
-<option value="303">Appalachia United States</option>
-<option value="304">Apple Creek United States</option>
-<option value="305">Apple River United States</option>
-<option value="306">Apple Valley  CA United States</option>
-<option value="307">Appleton  WI United States</option>
-<option value="308">Appleton City United States</option>
-<option value="309">Appling United States</option>
-<option value="310">Appomattox United States</option>
-<option value="311">Aptos United States</option>
-<option value="312">Aquebogue United States</option>
-<option value="313">Aquilla United States</option>
-<option value="314">Arab United States</option>
-<option value="315">Arabi United States</option>
-<option value="316">Aragon United States</option>
-<option value="317">Aransas Pass United States</option>
-<option value="318">Arapaho United States</option>
-<option value="319">Arapahoe United States</option>
-<option value="320">Arbela United States</option>
-<option value="321">Arbuckle United States</option>
-<option value="322">Arbyrd United States</option>
-<option value="323">Arcadia United States</option>
-<option value="324">Arcanum United States</option>
-<option value="325">Arcata United States</option>
-<option value="326">Archbald United States</option>
-<option value="327">Archbold United States</option>
-<option value="328">Archer City United States</option>
-<option value="329">Archer United States</option>
-<option value="330">Archie United States</option>
-<option value="331">Arcola United States</option>
-<option value="332">Arden United States</option>
-<option value="333">Ardmore United States</option>
-<option value="334">Ardsley United States</option>
-<option value="335">Aredale United States</option>
-<option value="336">Arendtsville United States</option>
-<option value="337">Arenzville United States</option>
-<option value="338">Argenta United States</option>
-<option value="339">Argonia United States</option>
-<option value="340">Argusville United States</option>
-<option value="341">Argyle United States</option>
-<option value="342">Arimo United States</option>
-<option value="343">Arispe United States</option>
-<option value="344">Ariton United States</option>
-<option value="345">Arivaca United States</option>
-<option value="346">Arizona City United States</option>
-<option value="347">Arkadelphia United States</option>
-<option value="348">Arkansas City United States</option>
-<option value="349">Arkdale United States</option>
-<option value="350">Arkoma United States</option>
-<option value="351">Arlee United States</option>
-<option value="352">Arley United States</option>
-<option value="353">Arlington  TX United States</option>
-<option value="354">Arlington  VA United States</option>
-<option value="355">Arlington Heights United States</option>
-<option value="356">Arma United States</option>
-<option value="357">Armada United States</option>
-<option value="358">Armagh United States</option>
-<option value="359">Armington United States</option>
-<option value="360">Armona United States</option>
-<option value="361">Armonk United States</option>
-<option value="362">Armour United States</option>
-<option value="363">Armstrong United States</option>
-<option value="364">Arnaudville United States</option>
-<option value="365">Arnegard United States</option>
-<option value="366">Arnett United States</option>
-<option value="367">Arnold United States</option>
-<option value="368">Arnoldsville United States</option>
-<option value="369">Aroma Park United States</option>
-<option value="370">Aromas United States</option>
-<option value="371">Aroostook Band of Micmac Trust Land United States</option>
-<option value="372">Arp United States</option>
-<option value="373">Arpin United States</option>
-<option value="374">Arriba United States</option>
-<option value="375">Arrowsmith United States</option>
-<option value="376">Arroyo Grande United States</option>
-<option value="377">Arroyo Hondo United States</option>
-<option value="378">Artesia United States</option>
-<option value="379">Artesian United States</option>
-<option value="380">Arthur City United States</option>
-<option value="381">Arthur United States</option>
-<option value="382">Arvada United States</option>
-<option value="383">Arverne United States</option>
-<option value="384">Arvin United States</option>
-<option value="385">Asbury Park United States</option>
-<option value="386">Asbury United States</option>
-<option value="387">Ascutney United States</option>
-<option value="388">Ash Flat United States</option>
-<option value="389">Ash Fork United States</option>
-<option value="390">Ash Grove United States</option>
-<option value="391">Ash United States</option>
-<option value="392">Ashaway United States</option>
-<option value="393">Ashburn United States</option>
-<option value="394">Ashburnham United States</option>
-<option value="395">Ashby United States</option>
-<option value="396">Ashdown United States</option>
-<option value="397">Asheboro United States</option>
-<option value="398">Asherton United States</option>
-<option value="399">Asheville  NC United States</option>
-<option value="400">Ashford United States</option>
-<option value="401">Ashkum United States</option>
-<option value="402">Ashland  WI United States</option>
-<option value="403">Ashland City United States</option>
-<option value="404">Ashland United States</option>
-<option value="405">Ashley United States</option>
-<option value="406">Ashmore United States</option>
-<option value="407">Ashtabula United States</option>
-<option value="408">Ashton United States</option>
-<option value="409">Askov United States</option>
-<option value="410">Asotin United States</option>
-<option value="411">Aspen  CO United States</option>
-<option value="412">Aspermont United States</option>
-<option value="413">Aspers United States</option>
-<option value="414">Assaria United States</option>
-<option value="415">Assumption United States</option>
-<option value="416">Astatula United States</option>
-<option value="417">Astor United States</option>
-<option value="418">Astoria  NY United States</option>
-<option value="419">Astoria  OR United States</option>
-<option value="420">Atalissa United States</option>
-<option value="421">Atascadero United States</option>
-<option value="422">Atascosa United States</option>
-<option value="423">Atchison United States</option>
-<option value="424">Atco United States</option>
-<option value="425">Atglen United States</option>
-<option value="426">Athena United States</option>
-<option value="427">Athens  GA United States</option>
-<option value="428">Athens  OH United States</option>
-<option value="429">Atherton United States</option>
-<option value="430">Athol United States</option>
-<option value="431">Atkins United States</option>
-<option value="432">Atkinson United States</option>
-<option value="433">Atlanta  GA United States</option>
-<option value="434">Atlantic Beach United States</option>
-<option value="435">Atlantic City  NJ United States</option>
-<option value="436">Atlantic Highlands United States</option>
-<option value="437">Atlantic United States</option>
-<option value="438">Atlasburg United States</option>
-<option value="439">Atmore United States</option>
-<option value="440">Atoka United States</option>
-<option value="441">Atqasuk United States</option>
-<option value="442">Attalla United States</option>
-<option value="443">Attapulgus United States</option>
-<option value="444">Attica United States</option>
-<option value="445">Attleboro Falls United States</option>
-<option value="446">Attleboro United States</option>
-<option value="447">Atwater United States</option>
-<option value="448">Atwood United States</option>
-<option value="449">Au Gres United States</option>
-<option value="450">Au Sable Forks United States</option>
-<option value="451">Au Train United States</option>
-<option value="452">Auberry United States</option>
-<option value="453">Aubrey United States</option>
-<option value="454">Auburn  AL United States</option>
-<option value="455">Auburn Hills United States</option>
-<option value="456">Auburndale United States</option>
-<option value="457">Audubon United States</option>
-<option value="458">Augusta  GA United States</option>
-<option value="459">Augusta  ME United States</option>
-<option value="460">Aulander United States</option>
-<option value="461">Ault United States</option>
-<option value="462">Aumsville United States</option>
-<option value="463">Aurelia United States</option>
-<option value="464">Aurora  IL United States</option>
-<option value="465">Aurora United States</option>
-<option value="466">Austell United States</option>
-<option value="467">Austin  TX United States</option>
-<option value="468">Austinburg United States</option>
-<option value="469">Autaugaville United States</option>
-<option value="470">Autryville United States</option>
-<option value="471">Auxier United States</option>
-<option value="472">Auxvasse United States</option>
-<option value="473">Ava United States</option>
-<option value="474">Avalon United States</option>
-<option value="475">Avenal United States</option>
-<option value="476">Avenel United States</option>
-<option value="477">Aventura United States</option>
-<option value="478">Averill Park United States</option>
-<option value="479">Avery United States</option>
-<option value="480">Avila Beach United States</option>
-<option value="481">Avilla United States</option>
-<option value="482">Avinger United States</option>
-<option value="483">Aviston United States</option>
-<option value="484">Avoca United States</option>
-<option value="485">Avon  CO United States</option>
-<option value="486">Avon Lake United States</option>
-<option value="487">Avon Park United States</option>
-<option value="488">AvonbytheSea United States</option>
-<option value="489">Avondale Estates United States</option>
-<option value="490">Avondale United States</option>
-<option value="491">Avonmore United States</option>
-<option value="492">Awendaw United States</option>
-<option value="493">Axis United States</option>
-<option value="494">Axtell United States</option>
-<option value="495">Ayden United States</option>
-<option value="496">Ayer United States</option>
-<option value="497">Aylett United States</option>
-<option value="498">Aynor United States</option>
-<option value="499">Azle United States</option>
-<option value="500">Aztec United States</option>
-<option value="501">Azusa United States</option>
-<option value="502">Babbitt United States</option>
-<option value="503">Babcock United States</option>
-<option value="504">Babson Park United States</option>
-<option value="505">Babylon United States</option>
-<option value="506">Backus United States</option>
-<option value="507">Bacliff United States</option>
-<option value="508">Bad Axe United States</option>
-<option value="509">Baden United States</option>
-<option value="510">Badger United States</option>
-<option value="511">Badin United States</option>
-<option value="512">Bagdad United States</option>
-<option value="513">Baggs United States</option>
-<option value="514">Bagley United States</option>
-<option value="515">Bailey Island United States</option>
-<option value="516">Bailey United States</option>
-<option value="517">Baileyton United States</option>
-<option value="518">Baileyville United States</option>
-<option value="519">Bainbridge Island United States</option>
-<option value="520">Bainville United States</option>
-<option value="521">Baird United States</option>
-<option value="522">Baisden United States</option>
-<option value="523">Baker City United States</option>
-<option value="524">Baker United States</option>
-<option value="525">Bakersfield  CA United States</option>
-<option value="526">Bakersville United States</option>
-<option value="527">BalaCynwyd United States</option>
-<option value="528">Balaton United States</option>
-<option value="529">Bald Knob United States</option>
-<option value="530">Baldwin City United States</option>
-<option value="531">Baldwin Park United States</option>
-<option value="532">Baldwin United States</option>
-<option value="533">Baldwinsville United States</option>
-<option value="534">Baldwinville United States</option>
-<option value="535">Baldwyn United States</option>
-<option value="536">Ball Ground United States</option>
-<option value="537">Ball United States</option>
-<option value="538">Ballantine United States</option>
-<option value="539">Ballico United States</option>
-<option value="540">Ballinger United States</option>
-<option value="541">Ballston Lake United States</option>
-<option value="542">Ballston Spa United States</option>
-<option value="543">Ballwin United States</option>
-<option value="544">Balsam Lake United States</option>
-<option value="545">Baltic United States</option>
-<option value="546">Baltimore  MD United States</option>
-<option value="547">Bamberg United States</option>
-<option value="548">Bancroft United States</option>
-<option value="549">Bandera United States</option>
-<option value="550">Bandon United States</option>
-<option value="551">Bangor United States</option>
-<option value="552">Bangs United States</option>
-<option value="553">Banner Elk United States</option>
-<option value="554">Banning United States</option>
-<option value="555">Banquete United States</option>
-<option value="556">Bantam United States</option>
-<option value="557">Bar Harbor United States</option>
-<option value="558">Baraboo United States</option>
-<option value="559">Baraga United States</option>
-<option value="560">Barberton United States</option>
-<option value="561">Barboursville United States</option>
-<option value="562">Barbourville United States</option>
-<option value="563">Barclay United States</option>
-<option value="564">Bardstown United States</option>
-<option value="565">Bardwell United States</option>
-<option value="566">Bargersville United States</option>
-<option value="567">Baring United States</option>
-<option value="568">Barkhamsted United States</option>
-<option value="569">Barling United States</option>
-<option value="570">Barnardsville United States</option>
-<option value="571">Barnegat United States</option>
-<option value="572">Barnes City United States</option>
-<option value="573">Barnes United States</option>
-<option value="574">Barnesville United States</option>
-<option value="575">Barnet United States</option>
-<option value="576">Barneveld United States</option>
-<option value="577">Barney United States</option>
-<option value="578">Barnhart United States</option>
-<option value="579">Barnsdall United States</option>
-<option value="580">Barnstable United States</option>
-<option value="581">Barnstead United States</option>
-<option value="582">Barnum United States</option>
-<option value="583">Barnwell United States</option>
-<option value="584">Baroda United States</option>
-<option value="585">Barre United States</option>
-<option value="586">Barrett United States</option>
-<option value="587">Barrington United States</option>
-<option value="588">Barron United States</option>
-<option value="589">Barronett United States</option>
-<option value="590">Barrow United States</option>
-<option value="591">Barry United States</option>
-<option value="592">Barryton United States</option>
-<option value="593">Barryville United States</option>
-<option value="594">Barstow United States</option>
-<option value="595">Bart Township United States</option>
-<option value="596">Bartelso United States</option>
-<option value="597">Bartlesville United States</option>
-<option value="598">Bartlett United States</option>
-<option value="599">Bartley United States</option>
-<option value="600">Barto United States</option>
-<option value="601">Barton United States</option>
-<option value="602">Bartonsville United States</option>
-<option value="603">Bartow United States</option>
-<option value="604">Basalt United States</option>
-<option value="605">Bascom United States</option>
-<option value="606">Basehor United States</option>
-<option value="607">Basile United States</option>
-<option value="608">Basin United States</option>
-<option value="609">Basking Ridge United States</option>
-<option value="610">Bassett United States</option>
-<option value="611">Bassfield United States</option>
-<option value="612">Bastrop United States</option>
-<option value="613">Basye United States</option>
-<option value="614">Batavia United States</option>
-<option value="615">Batchelor United States</option>
-<option value="616">Batchtown United States</option>
-<option value="617">Bates City United States</option>
-<option value="618">Batesburg United States</option>
-<option value="619">Batesville United States</option>
-<option value="620">Bath United States</option>
-<option value="621">Bathgate United States</option>
-<option value="622">Baton Rouge  LA United States</option>
-<option value="623">Battle Creek  MI United States</option>
-<option value="624">Battle Ground United States</option>
-<option value="625">Battle Lake United States</option>
-<option value="626">Battle Mountain United States</option>
-<option value="627">Battleboro United States</option>
-<option value="628">Baudette United States</option>
-<option value="629">Bauxite United States</option>
-<option value="630">Baxley United States</option>
-<option value="631">Baxter Springs United States</option>
-<option value="632">Baxter United States</option>
-<option value="633">Bay City United States</option>
-<option value="634">Bay Minette United States</option>
-<option value="635">Bay Port United States</option>
-<option value="636">Bay Saint Louis United States</option>
-<option value="637">Bay Shore United States</option>
-<option value="638">Bay Springs United States</option>
-<option value="639">Bay Village United States</option>
-<option value="640">Bayard United States</option>
-<option value="641">Bayboro United States</option>
-<option value="642">Bayfield United States</option>
-<option value="643">Bayonne United States</option>
-<option value="644">Bayside United States</option>
-<option value="645">Baytown United States</option>
-<option value="646">Bayville United States</option>
-<option value="647">Bazine United States</option>
-<option value="648">Beach City United States</option>
-<option value="649">Beach Haven United States</option>
-<option value="650">Beachwood United States</option>
-<option value="651">Beacon Falls United States</option>
-<option value="652">Beacon United States</option>
-<option value="653">Bealeton United States</option>
-<option value="654">Beaman United States</option>
-<option value="655">Bean Station United States</option>
-<option value="656">Bear Lake United States</option>
-<option value="657">Bear River City United States</option>
-<option value="658">Bear United States</option>
-<option value="659">Bearden United States</option>
-<option value="660">Beardstown United States</option>
-<option value="661">Bearsville United States</option>
-<option value="662">Beasley United States</option>
-<option value="663">Beatrice United States</option>
-<option value="664">Beattie United States</option>
-<option value="665">Beatty United States</option>
-<option value="666">Beattyville United States</option>
-<option value="667">Beaufort United States</option>
-<option value="668">Beaumont  TX United States</option>
-<option value="669">Beaver Bay United States</option>
-<option value="670">Beaver Creek United States</option>
-<option value="671">Beaver Crossing United States</option>
-<option value="672">Beaver Dam United States</option>
-<option value="673">Beaver Falls United States</option>
-<option value="674">Beaver Meadows United States</option>
-<option value="675">Beaver Springs United States</option>
-<option value="676">Beaver United States</option>
-<option value="677">Beaverton  OR United States</option>
-<option value="678">Beavertown United States</option>
-<option value="679">Bechtelsville United States</option>
-<option value="680">Beckemeyer United States</option>
-<option value="681">Becker United States</option>
-<option value="682">Becket United States</option>
-<option value="683">Beckley  WV United States</option>
-<option value="684">Beckville United States</option>
-<option value="685">Bedford Hills United States</option>
-<option value="686">Bedford Park United States</option>
-<option value="687">Bedford United States</option>
-<option value="688">Bedias United States</option>
-<option value="689">Bedminster Township  NJ United States</option>
-<option value="690">Beebe United States</option>
-<option value="691">Beech Bottom United States</option>
-<option value="692">Beech Creek United States</option>
-<option value="693">Beech Grove United States</option>
-<option value="694">Beecher City United States</option>
-<option value="695">Beecher United States</option>
-<option value="696">Beechmont United States</option>
-<option value="697">Beeville United States</option>
-<option value="698">Beggs United States</option>
-<option value="699">Bel Air United States</option>
-<option value="700">Belcamp United States</option>
-<option value="701">Belchertown United States</option>
-<option value="702">Belcourt United States</option>
-<option value="703">Belding United States</option>
-<option value="704">Belen United States</option>
-<option value="705">Belfair United States</option>
-<option value="706">Belfast United States</option>
-<option value="707">Belfield United States</option>
-<option value="708">Belford United States</option>
-<option value="709">Belfry United States</option>
-<option value="710">Belgium United States</option>
-<option value="711">Belgrade United States</option>
-<option value="712">Belhaven United States</option>
-<option value="713">Belington United States</option>
-<option value="714">Belknap United States</option>
-<option value="715">Bell Buckle United States</option>
-<option value="716">Bell City United States</option>
-<option value="717">Bell United States</option>
-<option value="718">Bella Vista United States</option>
-<option value="719">Bellaire United States</option>
-<option value="720">Bellbrook United States</option>
-<option value="721">Belle Center United States</option>
-<option value="722">Belle Chasse United States</option>
-<option value="723">Belle Fourche United States</option>
-<option value="724">Belle Glade United States</option>
-<option value="725">Belle Haven United States</option>
-<option value="726">Belle Mead United States</option>
-<option value="727">Belle Plaine United States</option>
-<option value="728">Belle Rose United States</option>
-<option value="729">Belle United States</option>
-<option value="730">Belle Valley United States</option>
-<option value="731">Belle Vernon United States</option>
-<option value="732">Belleair Beach United States</option>
-<option value="733">Bellefontaine United States</option>
-<option value="734">Bellefonte United States</option>
-<option value="735">Bellerose United States</option>
-<option value="736">Belleview United States</option>
-<option value="737">Belleville  IL United States</option>
-<option value="738">Bellevue  WA United States</option>
-<option value="739">Bellflower United States</option>
-<option value="740">Bellingham  WA United States</option>
-<option value="741">Bellmawr United States</option>
-<option value="742">Bellmore United States</option>
-<option value="743">Bellows Falls United States</option>
-<option value="744">Bellport United States</option>
-<option value="745">Bellville United States</option>
-<option value="746">Bellwood United States</option>
-<option value="747">Belmar United States</option>
-<option value="748">Belmond United States</option>
-<option value="749">Belmont  CA United States</option>
-<option value="750">Beloit United States</option>
-<option value="751">Belpre United States</option>
-<option value="752">Belt United States</option>
-<option value="753">Belton United States</option>
-<option value="754">Beltrami United States</option>
-<option value="755">Beltsville United States</option>
-<option value="756">Belvidere United States</option>
-<option value="757">Belzoni United States</option>
-<option value="758">Bement United States</option>
-<option value="759">Bemidji  MN United States</option>
-<option value="760">Bemus Point United States</option>
-<option value="761">Ben Lomond United States</option>
-<option value="762">Bena United States</option>
-<option value="763">Benavides United States</option>
-<option value="764">Bend  OR United States</option>
-<option value="765">Bendersville United States</option>
-<option value="766">Benedict United States</option>
-<option value="767">Benham United States</option>
-<option value="768">Benicia United States</option>
-<option value="769">Benkelman United States</option>
-<option value="770">Benld United States</option>
-<option value="771">Bennet United States</option>
-<option value="772">Bennettsville United States</option>
-<option value="773">Bennington United States</option>
-<option value="774">Benoit United States</option>
-<option value="775">Bensalem United States</option>
-<option value="776">Bensenville United States</option>
-<option value="777">Benson United States</option>
-<option value="778">Bent Mountain United States</option>
-<option value="779">Bentleyville United States</option>
-<option value="780">Benton City United States</option>
-<option value="781">Benton Harbor United States</option>
-<option value="782">Benton Ridge United States</option>
-<option value="783">Bentonia United States</option>
-<option value="784">Bentonville  AR United States</option>
-<option value="785">Benwood United States</option>
-<option value="786">Benzonia United States</option>
-<option value="787">Berea United States</option>
-<option value="788">Beresford United States</option>
-<option value="789">Bergen County  NJ United States</option>
-<option value="790">Bergenfield United States</option>
-<option value="791">Berger United States</option>
-<option value="792">Berkeley  CA United States</option>
-<option value="793">Berkeley Heights United States</option>
-<option value="794">Berkeley Springs United States</option>
-<option value="795">Berkshire United States</option>
-<option value="796">Berlin Center United States</option>
-<option value="797">Berlin Heights United States</option>
-<option value="798">Berlin United States</option>
-<option value="799">Bern United States</option>
-<option value="800">Bernalillo United States</option>
-<option value="801">Bernard United States</option>
-<option value="802">Bernardston United States</option>
-<option value="803">Bernardsville United States</option>
-<option value="804">Berne United States</option>
-<option value="805">Bernice United States</option>
-<option value="806">Bernie United States</option>
-<option value="807">Bernville United States</option>
-<option value="808">Berrien Springs United States</option>
-<option value="809">Berry United States</option>
-<option value="810">Berrysburg United States</option>
-<option value="811">Berryville United States</option>
-<option value="812">Bertha United States</option>
-<option value="813">Berthoud United States</option>
-<option value="814">Bertram United States</option>
-<option value="815">Bertrand United States</option>
-<option value="816">Berwick United States</option>
-<option value="817">Berwyn United States</option>
-<option value="818">Bessemer City United States</option>
-<option value="819">Bessemer United States</option>
-<option value="820">Bethalto United States</option>
-<option value="821">Bethania United States</option>
-<option value="822">Bethany Beach United States</option>
-<option value="823">Bethany United States</option>
-<option value="824">Bethel Island United States</option>
-<option value="825">Bethel Park United States</option>
-<option value="826">Bethel Springs United States</option>
-<option value="827">Bethel United States</option>
-<option value="828">Bethesda United States</option>
-<option value="829">Bethlehem  PA United States</option>
-<option value="830">Bethpage United States</option>
-<option value="831">Bethune United States</option>
-<option value="832">Betsy Layne United States</option>
-<option value="833">Bettendorf United States</option>
-<option value="834">Beulah United States</option>
-<option value="835">Beulaville United States</option>
-<option value="836">Beverly Hills United States</option>
-<option value="837">Beverly United States</option>
-<option value="838">Bevington United States</option>
-<option value="839">Bicknell United States</option>
-<option value="840">Biddeford United States</option>
-<option value="841">Big Bay United States</option>
-<option value="842">Big Bear Lake United States</option>
-<option value="843">Big Cabin United States</option>
-<option value="844">Big Creek United States</option>
-<option value="845">Big Falls United States</option>
-<option value="846">Big Flats United States</option>
-<option value="847">Big Horn United States</option>
-<option value="848">Big Lake United States</option>
-<option value="849">Big Pine Key United States</option>
-<option value="850">Big Pine United States</option>
-<option value="851">Big Piney United States</option>
-<option value="852">Big Pool United States</option>
-<option value="853">Big Rapids United States</option>
-<option value="854">Big Sandy United States</option>
-<option value="855">Big Sky United States</option>
-<option value="856">Big Spring United States</option>
-<option value="857">Big Stone City United States</option>
-<option value="858">Big Stone Gap United States</option>
-<option value="859">Big Sur United States</option>
-<option value="860">Big Timber United States</option>
-<option value="861">Big Wells United States</option>
-<option value="862">Bigelow United States</option>
-<option value="863">Bigfoot United States</option>
-<option value="864">Bigfork United States</option>
-<option value="865">Biggs United States</option>
-<option value="866">Biggsville United States</option>
-<option value="867">Biglerville United States</option>
-<option value="868">Billerica United States</option>
-<option value="869">Billings  MT United States</option>
-<option value="870">Biloxi  MS United States</option>
-<option value="871">Bim United States</option>
-<option value="872">Binford United States</option>
-<option value="873">Bingen United States</option>
-<option value="874">Binger United States</option>
-<option value="875">Bingham Lake United States</option>
-<option value="876">Binghamton  NY United States</option>
-<option value="877">Bippus United States</option>
-<option value="878">Birch Run United States</option>
-<option value="879">Birch Tree United States</option>
-<option value="880">Birchwood United States</option>
-<option value="881">Bird City United States</option>
-<option value="882">Bird Island United States</option>
-<option value="883">Birdsboro United States</option>
-<option value="884">Birdseye United States</option>
-<option value="885">Birmingham  AL United States</option>
-<option value="886">Birnamwood United States</option>
-<option value="887">Bisbee United States</option>
-<option value="888">Biscoe United States</option>
-<option value="889">Bishop United States</option>
-<option value="890">Bishopville United States</option>
-<option value="891">Bismarck  ND United States</option>
-<option value="892">Bison United States</option>
-<option value="893">Biwabik United States</option>
-<option value="894">Bixby United States</option>
-<option value="895">Blachly United States</option>
-<option value="896">Black Canyon City United States</option>
-<option value="897">Black Creek United States</option>
-<option value="898">Black Diamond United States</option>
-<option value="899">Black Eagle United States</option>
-<option value="900">Black Earth United States</option>
-<option value="901">Black Hawk United States</option>
-<option value="902">Black Mountain United States</option>
-<option value="903">Black River Falls United States</option>
-<option value="904">Black River United States</option>
-<option value="905">Black River United States</option>
-<option value="906">Black Rock United States</option>
-<option value="907">Blackduck United States</option>
-<option value="908">Blackfoot United States</option>
-<option value="909">Blacklick United States</option>
-<option value="910">Blacksburg  VA United States</option>
-<option value="911">Blackshear United States</option>
-<option value="912">Blackstone United States</option>
-<option value="913">Blacksville United States</option>
-<option value="914">Blackville United States</option>
-<option value="915">Blackwater United States</option>
-<option value="916">Blackwell United States</option>
-<option value="917">Blackwood United States</option>
-<option value="918">Bladenboro United States</option>
-<option value="919">Bladensburg United States</option>
-<option value="920">Blain United States</option>
-<option value="921">Blair United States</option>
-<option value="922">Blairsburg United States</option>
-<option value="923">Blairstown United States</option>
-<option value="924">Blairsville United States</option>
-<option value="925">Blakely United States</option>
-<option value="926">Blakesburg United States</option>
-<option value="927">Blanch United States</option>
-<option value="928">Blanchard United States</option>
-<option value="929">Blanchardville United States</option>
-<option value="930">Blanchester United States</option>
-<option value="931">Blanco United States</option>
-<option value="932">Bland United States</option>
-<option value="933">Blandford United States</option>
-<option value="934">Blanding United States</option>
-<option value="935">Blandinsville United States</option>
-<option value="936">Blandon United States</option>
-<option value="937">Blauvelt United States</option>
-<option value="938">Bledsoe United States</option>
-<option value="939">Blencoe United States</option>
-<option value="940">Blenheim United States</option>
-<option value="941">Blenker United States</option>
-<option value="942">Blessing United States</option>
-<option value="943">Bliss United States</option>
-<option value="944">Blissfield United States</option>
-<option value="945">Block Island United States</option>
-<option value="946">Blockton United States</option>
-<option value="947">Blodgett United States</option>
-<option value="948">Bloomburg United States</option>
-<option value="949">Bloomdale United States</option>
-<option value="950">Bloomer United States</option>
-<option value="951">Bloomfield Hills United States</option>
-<option value="952">Bloomfield United States</option>
-<option value="953">Blooming Glen United States</option>
-<option value="954">Blooming Grove United States</option>
-<option value="955">Blooming Prairie United States</option>
-<option value="956">Bloomingburg United States</option>
-<option value="957">Bloomingdale United States</option>
-<option value="958">Bloomington  IL United States</option>
-<option value="959">Bloomington  IN United States</option>
-<option value="960">Bloomsburg United States</option>
-<option value="961">Bloomsbury United States</option>
-<option value="962">Bloomsdale United States</option>
-<option value="963">Bloomville United States</option>
-<option value="964">Blossburg United States</option>
-<option value="965">Blountstown United States</option>
-<option value="966">Blountsville United States</option>
-<option value="967">Blountville United States</option>
-<option value="968">Blowing Rock United States</option>
-<option value="969">Blue Ball United States</option>
-<option value="970">Blue Bell United States</option>
-<option value="971">Blue Earth United States</option>
-<option value="972">Blue Eye United States</option>
-<option value="973">Blue Grass United States</option>
-<option value="974">Blue Hill United States</option>
-<option value="975">Blue Island United States</option>
-<option value="976">Blue Jay United States</option>
-<option value="977">Blue Lake United States</option>
-<option value="978">Blue Mound United States</option>
-<option value="979">Blue Mounds United States</option>
-<option value="980">Blue Mountain United States</option>
-<option value="981">Blue Point United States</option>
-<option value="982">Blue Rapids United States</option>
-<option value="983">Blue Ridge United States</option>
-<option value="984">Blue Springs United States</option>
-<option value="985">Bluefield United States</option>
-<option value="986">Bluejacket United States</option>
-<option value="987">Bluewater United States</option>
-<option value="988">Bluff City United States</option>
-<option value="989">Bluff United States</option>
-<option value="990">Bluffs United States</option>
-<option value="991">Bluffton United States</option>
-<option value="992">Bluford United States</option>
-<option value="993">Blum United States</option>
-<option value="994">Bly United States</option>
-<option value="995">Blythe United States</option>
-<option value="996">Blytheville United States</option>
-<option value="997">Blythewood United States</option>
-<option value="998">Boalsburg United States</option>
-<option value="999">Boardman United States</option>
+                  <label for="RENTORSALE">Price For </label>
+                  <select class="form-control" id="RENTORSALE" required="required" style="width:180px">
+                  	<option value="rent">Rent</option>
                         <!--<option value="sale">Sale</option>-->
                   </select>
                 </div>
 
-				</fieldset>
+                <div class="form-group">
+                  <label for="itemType">Type of Property</label>
+                  <select class="form-control" id="itemType" stroke="blue" required="required" style="width:180px">
+                  	<option value="Apartment">Apartment</option>
+                        <option value="Single_House">Single House</option>
+                        <option value="Flat">Flat</option>
+                        <option value="Attic">Attic Flat</option>
+                    <option value="Duplex">Duplex</option>
+                    <option value="Studio">Studio</option>
+                  </select>
+                  <!--<input type="text" class="form-control" id="itemType" style="width:180px">-->
+                </div>
+
+
+                 <div class="form-group">
+
+                  <label>City</label><input type="text" class="form-control" id="Cityname" placeholder="Town or city" stroke="blue" required="required" style="width:180px">
+                </div>
 
                 <div class="form-group">
+                  <label>Zip code</label>
+                  <input type="text" class="form-control" id="ZIP" placeholder="Zip code" required="required" stroke="blue" style="width:180px">
+                </div>
+
+                <div class="form-group">
+                  <label>Address</label>
+                  <input type="text" class="form-control" id="itemAdress1" placeholder="Address line 1" stroke="blue" required="required" style="width:180px">
+                  <input type="text" class="form-control" id="itemAdress2" placeholder="Address line 2" stroke="blue" style="width:180px">
+                  <input type="text" class="form-control" id="itemAdress3" placeholder="Address line 3" stroke="blue" style="width:180px">
+                </div>
+
+
+
+                <!--<div class="form-group">-->
+                  <!--<label>No. of Rooms</label>-->
+                  <!--<input type="number" class="form-control" id="itemRooms" min="1" max="20" stroke="blue" style="width:180px">-->
+                  <!--&lt;!&ndash;<input type="number" id="rowsize" min="2" max="200" style="width:50px" value="30" stroke="blue">&ndash;&gt;-->
+                <!--</div>-->
+				<div class="form-group">
+					<label  for="itemRoomsVal" >No. of Rooms</label>
+					 <output for="itemRoomsVal" id="itemRoomsVal">1</output>
+					 <input class="form-control" type="range" id="itemRooms" value="1" min="1" max="20" step=".5" required="required" onchange="update_vals()">
+                </div>
+
+                <!--<div class="form-group">-->
+                  <!--<label>Which Floor</label>-->
+                  <!--<input type="number" class="form-control" id="itemFloor"  min="0" max="50" stroke="blue" style="width:180px">-->
+                <!--</div>-->
+				<!-- -->
+				<div class="form-group">
+					<label  for="itemFloorVal" >Which Floor</label>
+					 <output for="itemFloorVal" id="itemFloorVal">1</output>
+					 <input class="form-control" type="range" id="itemFloor" value="1" min="-1" max="20" step="1" required="required" onchange="update_vals()">
+                </div>
+                <!--<div class="form-group">-->
+                  <!--<label>Living space (sq.M)</label>-->
+                  <!--<input type="number" class="form-control" id="itemLiving_space" min="10" max="1000" stroke="blue"style="width:180px">-->
+                <!--</div>-->
+
+				<div class="form-group">
+					<label  for="itemLiving_spaceVal" >Living space (sq.M)</label>
+					 <output for="itemLiving_spaceVal" id="itemLiving_spaceVal">50</output>
+					 <input class="form-control" type="range" id="itemLiving_space" value="50" min="10" max="1000" step="1" required="required" onchange="update_vals()">
+                </div>
+
+                <!--<div class="form-group">-->
+                  <!--<label>Year built</label>-->
+                  <!--<input type="number" class="form-control" id="itemYear_built" min="1400" max="2018" stroke="blue" style="width:180px">-->
+                <!--</div>-->
+
+				<div class="form-group">
+					<label  for="itemYear_builtVal" >Year built</label>
+					 <output for="itemYear_builtVal" id="itemYear_builtVal">2000</output>
+					 <input class="form-control" type="range" id="itemYear_built" value="2000" min="1400" max="2017" step="1" required="required" onchange="update_vals()">
+                </div>
+
+                <!--<div class="form-group">-->
+                  <!--<label>Last renovation</label>-->
+                  <!--<input type="number" class="form-control" id="itemLast_renovation" min="1950" max="2016" stroke="blue" style="width:180px">-->
+                <!--</div>-->
+					<div class="form-group">
+					<label  for="itemLast_renovationVal" >Last renovation</label>
+					 <output for="itemLast_renovationVal" id="itemLast_renovationVal">2000</output>
+					 <input class="form-control" type="range" id="itemLast_renovation" value="2000" min="1950" max="2017" step="1" required="required" onchange="update_vals()">
+                </div>
+
+
+
+
+				<!--<hr class="colorgraph">-->
+				<!--<div class="row">-->
+					<div class="form-group">
 						<!--<input type="submit" class="btn btn-lg btn-success btn-block" value="Sign In">-->
-						<a class="btn btn-success btn-lg" style="width:180px" font-size="4" onclick="find_similar_cities()" >Find Similar Cities</a>
+						<a class="btn btn-success btn-lg" style="width:180px" font-size="4" onclick="predict_rent()" >Estimate</a>
                       <!--<button href="#" class="btn btn-primary" onclick="train_SOM()" role="button"><font size="1.">Train SOM</font> </button>-->
 					</div>
 
-				<div class="form-group">
-					 <!--<label  for="ZoomVal" >Zoom</label>-->
-					 <!--<output for="ZoomVal" id="ZoomVal">12.1</output>-->
-					<label  >Zoom</label>
-					<!--<output for="ZoomVal" id="ZoomVal">13.0</output>-->
-					<input class="form-control" type="range" id="Zoom" value="13.0" min="10" max="18" step="1" onchange="change_zoom()">
-					<!--<input class="form-control" type="range" id="Zoom" step='0.1' value="12.1" min="10" max="18" onchange="change_zoom()">-->
-				 </div>
-
-				<div class="form-group">
-                  <label for="mapstyle">map style </label>
-                  <select class="form-control" id="mapstyle" required="required" style="width:180px" onchange="change_mapstyle()">
-
-                      <option value="White">White</option>
-                      <option value="Dark">Dark</option>
-
-                        <!--<option value="sale">Sale</option>-->
-                  </select>
+					<div class="form-group">
+                  <label>Estimated Results</label>
+                  <input type="text" class="form-control" id="analysisresultstext"  style="width:260px">
                 </div>
+
+				<!--</div>-->
+
+				</fieldset>
 			</form>
 
 
 
 		</div>
 	</div>
-
-
 </div>
+<p><div id="Rentchart"></div></p>
+<div id="map"></div>
 
 
-<!-- Page Content -->
- <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog">
+    <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
             <button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title">Welcome to Rea$tLand !</h4>
+            <h4 class="modal-title">Welcome to FairyFy!</h4>
           </div>
           <div class="modal-body">
             <ul class="nav nav-tabs nav-justified" id="aboutTabs">
@@ -1237,9 +303,9 @@ input:required:hover {
             </ul>
             <div class="tab-content" id="aboutTabsContent">
               <div class="tab-pane fade active in" id="about">
-                <p>An application for spatial search of the rental and sale listings in Switzerland.</p>
+                <!--<p>An application for spatial search of the rental and sale listings in Switzerland.</p>-->
                 <p>Developed by <a href="http://www.vahidmoosavi.com/" target="_blank">Vahid Moosavi</a> at the <a href="http://caad.arch.ethz.ch/" target="_blank">Chair for Computer Aided Architectural Design (CAAD), ETH Zürich</a>.</p>
-                <p>Based on open source package <a href="https://github.com/bmcbride/bootleaf" target="_blank">BootLeaf</a>.</p>
+                <!--<p>Based on open source package <a href="https://github.com/bmcbride/bootleaf" target="_blank">BootLeaf</a>.</p>-->
 
                 <div class="panel panel-primary">
                   <!--<div class="panel-heading">Features</div>-->
@@ -1310,29 +376,43 @@ input:required:hover {
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
-    <!--&lt;!&ndash; jQuery &ndash;&gt;-->
-    <!--<script src="js/jquery.js"></script>-->
 
-    <!--&lt;!&ndash; Bootstrap Core JavaScript &ndash;&gt;-->
-    <!--<script src="js/bootstrap.min.js"></script>-->
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 
+    <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+	<script src="static/colorbrewer.min.js"></script>
+    <script src="static/fairify_app.js"></script>
 
-<script src="./js/leaflet.js"></script>
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>-->
-<script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
-
-<script src="js/app.js"></script>
-
-    <script>
+       <script>
     	$("#about-btn").click(function() {
   $("#aboutModal").modal("show");
   $(".navbar-collapse.in").collapse("hide");
   return false;
 });
     </script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89352903-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 
 </body>
 

@@ -98,6 +98,69 @@ input:required:focus {
  */
 input:required:hover {
   opacity: 1;
+
+
+.center {
+    text-align: center;
+
+}
+      .form-group {
+    margin: auto;
+    width: 60%;
+    border: 1px  steelblue;
+    padding: 10px;
+}
+
+input[type=range]{
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+	background: #ddd;
+    border: none;
+    <!--background: 3f91e5;;-->
+    <!--border: steelblue;-->
+    border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+    margin-top: -4px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+		/* style all input elements with a required attribute */
+input:required {
+  box-shadow: 4px 4px 5px goldenrod;
+}
+
+/**
+ * style input elements that have a required
+ * attribute and a focus state
+ */
+input:required:focus {
+  border: 1px solid red;
+  outline: none;
+}
+
+/**
+ * style input elements that have a required
+ * attribute and a hover state
+ */
+input:required:hover {
+  opacity: 1;
+}
+
 }
 </style>
 </head>

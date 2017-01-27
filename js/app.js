@@ -486,7 +486,7 @@ mymap12.setView( [lats[12], lngs[12]], zoominit);
 mymap13.setView( [lats[13], lngs[13]], zoominit);
 mymap14.setView( [lats[14], lngs[14]], zoominit);
 
-document.querySelector('#ZoomVal').value = zoominit;
+//document.querySelector('#ZoomVal').value = zoominit;
 
 
 //if (RENTORSALE == 'rent'){
@@ -521,7 +521,7 @@ document.querySelector('#ZoomVal').value = zoominit;
 function change_zoom(){
 
 ZoomVal = document.getElementById("Zoom").value;
-document.querySelector('#ZoomVal').value = ZoomVal;
+//document.querySelector('#ZoomVal').value = ZoomVal;
 //console.log(ZoomVal);
 
 mymap0.setZoom(ZoomVal);

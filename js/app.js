@@ -25,7 +25,7 @@ onlyroads = White;
 
 
 var basemap ='https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw'
-var zoominit = 13.0;
+var zoominit = 12.1;
 
 
 var citynames;

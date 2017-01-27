@@ -12,12 +12,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
 <meta name="google-site-verification" content="9xLYPPbVVVHZpxSBeVkxRVFz1sc1RUA37ZQ0m0FSPWc" />
-    <!--<meta charset="utf-8">-->
-    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
-    <!--<meta name="description" content="">-->
-    <!--<meta name="author" content="">-->
-
 
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -140,21 +134,11 @@ input:required:hover {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">FairyFy</a>
+                <a class="navbar-brand" href="/">SimCityFinder</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li>
-                        <a href="/fairyfy">Price Estimation</a>
-                    </li>
-                    <li>
-                        <a href="/supply_analysis">Market Analysis</a>
-                    </li>
-                    <li>
-                        <a href="/map">Maps</a>
-                    </li>
-
 
                     <li>
                         <a href="#" id="about-btn">About</a>
@@ -1268,89 +1252,92 @@ input:required:hover {
         <div class="modal-content">
           <div class="modal-header">
             <button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title">Welcome to FairyFy!</h4>
+            <h4 class="modal-title">Welcome to SimCityFinder!</h4>
           </div>
           <div class="modal-body">
             <ul class="nav nav-tabs nav-justified" id="aboutTabs">
               <li class="active"><a href="#about" data-toggle="tab"><i class="fa fa-question-circle"></i>&nbsp;About the project</a></li>
-              <li><a href="#contact" data-toggle="tab"><i class="fa fa-envelope"></i>&nbsp;Contact us</a></li>
-              <li><a href="#disclaimer" data-toggle="tab"><i class="fa fa-exclamation-circle"></i>&nbsp;Disclaimer</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-globe"></i>&nbsp;Metadata <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <!--<li><a href="#boroughs-tab" data-toggle="tab">zipcodes</a></li>-->
-                  <!--<li><a href="#subway-lines-tab" data-toggle="tab">Subway Lines</a></li>-->
-                  <li><a href="#sale-tab" data-toggle="tab">Sale</a></li>
-                  <li><a href="#rental-tab" data-toggle="tab">Rental</a></li>
-                </ul>
-              </li>
+              <!--<li><a href="#contact" data-toggle="tab"><i class="fa fa-envelope"></i>&nbsp;Contact us</a></li>-->
+              <!--<li><a href="#disclaimer" data-toggle="tab"><i class="fa fa-exclamation-circle"></i>&nbsp;Disclaimer</a></li>-->
+              <!--<li class="dropdown">-->
+                <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-globe"></i>&nbsp;Metadata <b class="caret"></b></a>-->
+                <!--<ul class="dropdown-menu">-->
+                  <!--&lt;!&ndash;<li><a href="#boroughs-tab" data-toggle="tab">zipcodes</a></li>&ndash;&gt;-->
+                  <!--&lt;!&ndash;<li><a href="#subway-lines-tab" data-toggle="tab">Subway Lines</a></li>&ndash;&gt;-->
+                  <!--<li><a href="#sale-tab" data-toggle="tab">Sale</a></li>-->
+                  <!--<li><a href="#rental-tab" data-toggle="tab">Rental</a></li>-->
+                <!--</ul>-->
+              <!--</li>-->
             </ul>
             <div class="tab-content" id="aboutTabsContent">
               <div class="tab-pane fade active in" id="about">
-                <!--<p>An application for spatial search of the rental and sale listings in Switzerland.</p>-->
-                <p>Developed by <a href="http://www.vahidmoosavi.com/" target="_blank">Vahid Moosavi</a> at the <a href="http://caad.arch.ethz.ch/" target="_blank">Chair for Computer Aided Architectural Design (CAAD), ETH Zürich</a>.</p>
+                <p>Using styled maps from <a href="mapbox.com/mapbox-studio/"target="_blank">Mapbox Studio</a> and their static APIs, we collected the images of the road networks of more than 65K cities across the world. </p>
+                  <p>Using the collected images of the city networks, we trained a Convolutional Autoencoder Neural Network. Similar to other autoencoders, the middle layer is a dense representation of the data and can be used to map similar data points (here, cities). </p>
+                <p>Here, we just simply use the learned vectors in KNN framework and find similar cities with the selected city by user.</p>
+                 <p>Further visualizations and the collected data can be found at <a href= "https://github.com/sevamoo/roadsareread" target="_blank"></a></p>
+                  <p>Developed by <a href="http://www.vahidmoosavi.com/" target="_blank">Vahid Moosavi</a> at the <a href="http://caad.arch.ethz.ch/" target="_blank">Chair for Computer Aided Architectural Design (CAAD), ETH Zürich</a>.</p>
                 <!--<p>Based on open source package <a href="https://github.com/bmcbride/bootleaf" target="_blank">BootLeaf</a>.</p>-->
 
-                <div class="panel panel-primary">
-                  <!--<div class="panel-heading">Features</div>-->
-                  <!--<ul class="list-group">-->
-                  <!--  <li class="list-group-item">Fullscreen mobile-friendly map template with responsive navbar and modal placeholders</li>-->
-                  <!--  <li class="list-group-item">jQuery loading of external GeoJSON files</li>-->
-                  <!--  <li class="list-group-item">Logical multiple layer marker clustering via the <a href="https://github.com/Leaflet/Leaflet.markercluster" target="_blank">leaflet marker cluster plugin</a></li>-->
-                  <!--  <li class="list-group-item">Elegant client-side multi-layer feature search with autocomplete using <a href="http://twitter.github.io/typeahead.js/" target="_blank">typeahead.js</a></li>-->
-                  <!--  <li class="list-group-item">Responsive sidebar feature list synced with map bounds, which includes sorting and filtering via <a href="http://listjs.com/" target="_blank">list.js</a></li>-->
-                  <!--  <li class="list-group-item">Marker icons included in grouped layer control via the <a href="https://github.com/ismyrnow/Leaflet.groupedlayercontrol" target="_blank">grouped layer control plugin</a></li>-->
-                  <!--</ul>-->
-                </div>
+                <!--<div class="panel panel-primary">-->
+                  <!--&lt;!&ndash;<div class="panel-heading">Features</div>&ndash;&gt;-->
+                  <!--&lt;!&ndash;<ul class="list-group">&ndash;&gt;-->
+                  <!--&lt;!&ndash;  <li class="list-group-item">Fullscreen mobile-friendly map template with responsive navbar and modal placeholders</li>&ndash;&gt;-->
+                  <!--&lt;!&ndash;  <li class="list-group-item">jQuery loading of external GeoJSON files</li>&ndash;&gt;-->
+                  <!--&lt;!&ndash;  <li class="list-group-item">Logical multiple layer marker clustering via the <a href="https://github.com/Leaflet/Leaflet.markercluster" target="_blank">leaflet marker cluster plugin</a></li>&ndash;&gt;-->
+                  <!--&lt;!&ndash;  <li class="list-group-item">Elegant client-side multi-layer feature search with autocomplete using <a href="http://twitter.github.io/typeahead.js/" target="_blank">typeahead.js</a></li>&ndash;&gt;-->
+                  <!--&lt;!&ndash;  <li class="list-group-item">Responsive sidebar feature list synced with map bounds, which includes sorting and filtering via <a href="http://listjs.com/" target="_blank">list.js</a></li>&ndash;&gt;-->
+                  <!--&lt;!&ndash;  <li class="list-group-item">Marker icons included in grouped layer control via the <a href="https://github.com/ismyrnow/Leaflet.groupedlayercontrol" target="_blank">grouped layer control plugin</a></li>&ndash;&gt;-->
+                  <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+                <!--</div>-->
               </div>
-              <div id="disclaimer" class="tab-pane fade text-danger">
-                <p>The data provided on this site is for informational and planning purposes only.</p>
-                <p>Absolutely no accuracy or completeness guarantee is implied or intended. All information on this map is subject to such variations and corrections as might result from a complete title search and/or accurate field survey.</p>
-              </div>
-              <div class="tab-pane fade" id="contact">
-                <form id="contact-form">
-                  <div class="well well-sm">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label for="first-name">First Name:</label>
-                          <input type="text" class="form-control" id="first-name">
-                        </div>
-                        <div class="form-group">
-                          <label for="last-name">Last Name:</label>
-                          <input type="text" class="form-control" id="last-email">
-                        </div>
-                        <div class="form-group">
-                          <label for="email">Email:</label>
-                          <input type="text" class="form-control" id="email">
-                        </div>
-                      </div>
-                      <div class="col-md-8">
-                        <label for="message">Message:</label>
-                        <textarea class="form-control" rows="8" id="message"></textarea>
-                      </div>
-                      <div class="col-md-12">
-                        <p>
-                          <button type="submit" class="btn btn-primary pull-right" data-dismiss="modal">Submit</button>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-              </div>
+              <!--<div id="disclaimer" class="tab-pane fade text-danger">-->
+                <!--<p>The data provided on this site is for informational and planning purposes only.</p>-->
+                <!--<p>Absolutely no accuracy or completeness guarantee is implied or intended. All information on this map is subject to such variations and corrections as might result from a complete title search and/or accurate field survey.</p>-->
+              <!--</div>-->
+              <!--<div class="tab-pane fade" id="contact">-->
+                <!--<form id="contact-form">-->
+                  <!--<div class="well well-sm">-->
+                    <!--<div class="row">-->
+                      <!--<div class="col-md-4">-->
+                        <!--<div class="form-group">-->
+                          <!--<label for="first-name">First Name:</label>-->
+                          <!--<input type="text" class="form-control" id="first-name">-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                          <!--<label for="last-name">Last Name:</label>-->
+                          <!--<input type="text" class="form-control" id="last-email">-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                          <!--<label for="email">Email:</label>-->
+                          <!--<input type="text" class="form-control" id="email">-->
+                        <!--</div>-->
+                      <!--</div>-->
+                      <!--<div class="col-md-8">-->
+                        <!--<label for="message">Message:</label>-->
+                        <!--<textarea class="form-control" rows="8" id="message"></textarea>-->
+                      <!--</div>-->
+                      <!--<div class="col-md-12">-->
+                        <!--<p>-->
+                          <!--<button type="submit" class="btn btn-primary pull-right" data-dismiss="modal">Submit</button>-->
+                        <!--</p>-->
+                      <!--</div>-->
+                    <!--</div>-->
+                  <!--</div>-->
+                <!--</form>-->
+              <!--</div>-->
               <!--<div class="tab-pane fade" id="boroughs-tab">-->
               <!--  <p>Borough data courtesy of <a href="http://www.nyc.gov/html/dcp/pdf/bytes/nybbwi_metadata.pdf" target="_blank">New York City Department of City Planning</a></p>-->
               <!--</div>-->
               <!--<div class="tab-pane fade" id="subway-lines-tab">-->
               <!--  <p><a href="http://spatialityblog.com/2010/07/08/mta-gis-data-update/#datalinks" target="_blank">MTA Subway data</a> courtesy of the <a href="http://www.urbanresearch.org/about/cur-components/cuny-mapping-service" target="_blank">CUNY Mapping Service at the Center for Urban Research</a></p>-->
               <!--</div>-->
-              <div class="tab-pane fade" id="sale-tab">
-                <p>Sales advertisement data is collected through crawling public data in internet</p>
-              </div>
-              <div class="tab-pane fade" id="rental-tab">
-                <p>Rental advertisement data is collected through crawling public data in internet</p>
-                <!--<p>Museum data courtesy of <a href="https://data.cityofnewyork.us/Recreation/Museums-and-Galleries/sat5-adpb" target="_blank">NYC Department of Information & Telecommunications (DoITT)</a></p>-->
-              </div>
+              <!--<div class="tab-pane fade" id="sale-tab">-->
+                <!--<p>Sales advertisement data is collected through crawling public data in internet</p>-->
+              <!--</div>-->
+              <!--<div class="tab-pane fade" id="rental-tab">-->
+                <!--<p>Rental advertisement data is collected through crawling public data in internet</p>-->
+                <!--&lt;!&ndash;<p>Museum data courtesy of <a href="https://data.cityofnewyork.us/Recreation/Museums-and-Galleries/sat5-adpb" target="_blank">NYC Department of Information & Telecommunications (DoITT)</a></p>&ndash;&gt;-->
+              <!--</div>-->
             </div>
           </div>
           <div class="modal-footer">

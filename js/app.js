@@ -60,36 +60,36 @@ $.getJSON("data/city_neigs_lngs.json", function(json) {
 
 var cityid = document.getElementById("cityname").value;
 var names_init = {"0":"Eleele United States","1":"Kiowa United States","2":"Highmore United States","3":"Tribune United States","4":"Luxora United States","5":"Faulkton United States","6":"Vinalhaven United States","7":"Levan United States","8":"Wauneta United States","9":"Bird Island United States","10":"Onyx United States","11":"Weatherly United States","12":"Alma Center United States","13":"Scobey United States","14":"Soper United States","15":"Yatesville United States","16":"Mescalero United States","17":"Waitsburg United States","18":"Ekalaka United States","19":"Emmet United States","20":"Enosburg Falls United States","21":"Stanberry United States","22":"Lake Preston United States","23":"West Yellowstone United States","24":"Blandinsville United States","25":"Lockesburg United States","26":"Fordville United States"}
-document.getElementById("city0").innerHTML = '<font size="1">'+names_init[0]+'</font>';
-document.getElementById("city1").innerHTML = '<font size="1">'+names_init[1]+'</font>';
-document.getElementById("city2").innerHTML = '<font size="1">'+names_init[2]+'</font>';
-document.getElementById("city3").innerHTML = '<font size="1">'+names_init[3]+'</font>';
-document.getElementById("city4").innerHTML = '<font size="1">'+names_init[4]+'</font>';
-document.getElementById("city5").innerHTML = '<font size="1">'+names_init[5]+'</font>';
-document.getElementById("city6").innerHTML = '<font size="1">'+names_init[6]+'</font>';
-document.getElementById("city7").innerHTML = '<font size="1">'+names_init[7]+'</font>';
-document.getElementById("city8").innerHTML = '<font size="1">'+names_init[8]+'</font>';
-
-document.getElementById("city9").innerHTML = '<font size="1">'+names_init[9]+'</font>';
-document.getElementById("city10").innerHTML = '<font size="1">'+names_init[10]+'</font>';
-document.getElementById("city11").innerHTML = '<font size="1">'+names_init[11]+'</font>';
-document.getElementById("city12").innerHTML = '<font size="1">'+names_init[12]+'</font>';
-document.getElementById("city13").innerHTML = '<font size="1">'+names_init[13]+'</font>';
-document.getElementById("city14").innerHTML = '<font size="1">'+names_init[14]+'</font>';
-document.getElementById("city15").innerHTML = '<font size="1">'+names_init[15]+'</font>';
-document.getElementById("city16").innerHTML = '<font size="1">'+names_init[16]+'</font>';
-document.getElementById("city17").innerHTML = '<font size="1">'+names_init[17]+'</font>';
-
-
-document.getElementById("city18").innerHTML = '<font size="1">'+names_init[18]+'</font>';
-document.getElementById("city19").innerHTML = '<font size="1">'+names_init[19]+'</font>';
-document.getElementById("city20").innerHTML = '<font size="1">'+names_init[20]+'</font>';
-document.getElementById("city21").innerHTML = '<font size="1">'+names_init[21]+'</font>';
-document.getElementById("city22").innerHTML = '<font size="1">'+names_init[22]+'</font>';
-document.getElementById("city23").innerHTML = '<font size="1">'+names_init[23]+'</font>';
-document.getElementById("city24").innerHTML = '<font size="1">'+names_init[24]+'</font>';
-document.getElementById("city25").innerHTML = '<font size="1">'+names_init[25]+'</font>';
-document.getElementById("city26").innerHTML = '<font size="1">'+names_init[26]+'</font>';
+//document.getElementById("city0").innerHTML = '<font size="1">'+names_init[0]+'</font>';
+//document.getElementById("city1").innerHTML = '<font size="1">'+names_init[1]+'</font>';
+//document.getElementById("city2").innerHTML = '<font size="1">'+names_init[2]+'</font>';
+//document.getElementById("city3").innerHTML = '<font size="1">'+names_init[3]+'</font>';
+//document.getElementById("city4").innerHTML = '<font size="1">'+names_init[4]+'</font>';
+//document.getElementById("city5").innerHTML = '<font size="1">'+names_init[5]+'</font>';
+//document.getElementById("city6").innerHTML = '<font size="1">'+names_init[6]+'</font>';
+//document.getElementById("city7").innerHTML = '<font size="1">'+names_init[7]+'</font>';
+//document.getElementById("city8").innerHTML = '<font size="1">'+names_init[8]+'</font>';
+//
+//document.getElementById("city9").innerHTML = '<font size="1">'+names_init[9]+'</font>';
+//document.getElementById("city10").innerHTML = '<font size="1">'+names_init[10]+'</font>';
+//document.getElementById("city11").innerHTML = '<font size="1">'+names_init[11]+'</font>';
+//document.getElementById("city12").innerHTML = '<font size="1">'+names_init[12]+'</font>';
+//document.getElementById("city13").innerHTML = '<font size="1">'+names_init[13]+'</font>';
+//document.getElementById("city14").innerHTML = '<font size="1">'+names_init[14]+'</font>';
+//document.getElementById("city15").innerHTML = '<font size="1">'+names_init[15]+'</font>';
+//document.getElementById("city16").innerHTML = '<font size="1">'+names_init[16]+'</font>';
+//document.getElementById("city17").innerHTML = '<font size="1">'+names_init[17]+'</font>';
+//
+//
+//document.getElementById("city18").innerHTML = '<font size="1">'+names_init[18]+'</font>';
+//document.getElementById("city19").innerHTML = '<font size="1">'+names_init[19]+'</font>';
+//document.getElementById("city20").innerHTML = '<font size="1">'+names_init[20]+'</font>';
+//document.getElementById("city21").innerHTML = '<font size="1">'+names_init[21]+'</font>';
+//document.getElementById("city22").innerHTML = '<font size="1">'+names_init[22]+'</font>';
+//document.getElementById("city23").innerHTML = '<font size="1">'+names_init[23]+'</font>';
+//document.getElementById("city24").innerHTML = '<font size="1">'+names_init[24]+'</font>';
+//document.getElementById("city25").innerHTML = '<font size="1">'+names_init[25]+'</font>';
+//document.getElementById("city26").innerHTML = '<font size="1">'+names_init[26]+'</font>';
 
 
 //document.getElementById("city9").innerHTML = '<font size="1">'+names_init[9]+'</font>';
@@ -499,37 +499,37 @@ cityid = document.getElementById("cityname").value;
 //mymap14 = L.map('mapid14').setView([51.505, -0.09], 10);
 
 var names_init = city_neigs_names[cityid];
-document.getElementById("city0").innerHTML = '<font size="1">'+names_init[0]+'</font>';
-document.getElementById("city1").innerHTML = '<font size="1">'+names_init[1]+'</font>';
-document.getElementById("city2").innerHTML = '<font size="1">'+names_init[2]+'</font>';
-document.getElementById("city3").innerHTML = '<font size="1">'+names_init[3]+'</font>';
-document.getElementById("city4").innerHTML = '<font size="1">'+names_init[4]+'</font>';
-document.getElementById("city5").innerHTML = '<font size="1">'+names_init[5]+'</font>';
-document.getElementById("city6").innerHTML = '<font size="1">'+names_init[6]+'</font>';
-document.getElementById("city7").innerHTML = '<font size="1">'+names_init[7]+'</font>';
-document.getElementById("city8").innerHTML = '<font size="1">'+names_init[8]+'</font>';
-
-
-document.getElementById("city9").innerHTML = '<font size="1">'+names_init[9]+'</font>';
-document.getElementById("city10").innerHTML = '<font size="1">'+names_init[10]+'</font>';
-document.getElementById("city11").innerHTML = '<font size="1">'+names_init[11]+'</font>';
-document.getElementById("city12").innerHTML = '<font size="1">'+names_init[12]+'</font>';
-document.getElementById("city13").innerHTML = '<font size="1">'+names_init[13]+'</font>';
-document.getElementById("city14").innerHTML = '<font size="1">'+names_init[14]+'</font>';
-document.getElementById("city15").innerHTML = '<font size="1">'+names_init[15]+'</font>';
-document.getElementById("city16").innerHTML = '<font size="1">'+names_init[16]+'</font>';
-document.getElementById("city17").innerHTML = '<font size="1">'+names_init[17]+'</font>';
-
-
-document.getElementById("city18").innerHTML = '<font size="1">'+names_init[18]+'</font>';
-document.getElementById("city19").innerHTML = '<font size="1">'+names_init[19]+'</font>';
-document.getElementById("city20").innerHTML = '<font size="1">'+names_init[20]+'</font>';
-document.getElementById("city21").innerHTML = '<font size="1">'+names_init[21]+'</font>';
-document.getElementById("city22").innerHTML = '<font size="1">'+names_init[22]+'</font>';
-document.getElementById("city23").innerHTML = '<font size="1">'+names_init[23]+'</font>';
-document.getElementById("city24").innerHTML = '<font size="1">'+names_init[24]+'</font>';
-document.getElementById("city25").innerHTML = '<font size="1">'+names_init[25]+'</font>';
-document.getElementById("city26").innerHTML = '<font size="1">'+names_init[26]+'</font>';
+//document.getElementById("city0").innerHTML = '<font size="1">'+names_init[0]+'</font>';
+//document.getElementById("city1").innerHTML = '<font size="1">'+names_init[1]+'</font>';
+//document.getElementById("city2").innerHTML = '<font size="1">'+names_init[2]+'</font>';
+//document.getElementById("city3").innerHTML = '<font size="1">'+names_init[3]+'</font>';
+//document.getElementById("city4").innerHTML = '<font size="1">'+names_init[4]+'</font>';
+//document.getElementById("city5").innerHTML = '<font size="1">'+names_init[5]+'</font>';
+//document.getElementById("city6").innerHTML = '<font size="1">'+names_init[6]+'</font>';
+//document.getElementById("city7").innerHTML = '<font size="1">'+names_init[7]+'</font>';
+//document.getElementById("city8").innerHTML = '<font size="1">'+names_init[8]+'</font>';
+//
+//
+//document.getElementById("city9").innerHTML = '<font size="1">'+names_init[9]+'</font>';
+//document.getElementById("city10").innerHTML = '<font size="1">'+names_init[10]+'</font>';
+//document.getElementById("city11").innerHTML = '<font size="1">'+names_init[11]+'</font>';
+//document.getElementById("city12").innerHTML = '<font size="1">'+names_init[12]+'</font>';
+//document.getElementById("city13").innerHTML = '<font size="1">'+names_init[13]+'</font>';
+//document.getElementById("city14").innerHTML = '<font size="1">'+names_init[14]+'</font>';
+//document.getElementById("city15").innerHTML = '<font size="1">'+names_init[15]+'</font>';
+//document.getElementById("city16").innerHTML = '<font size="1">'+names_init[16]+'</font>';
+//document.getElementById("city17").innerHTML = '<font size="1">'+names_init[17]+'</font>';
+//
+//
+//document.getElementById("city18").innerHTML = '<font size="1">'+names_init[18]+'</font>';
+//document.getElementById("city19").innerHTML = '<font size="1">'+names_init[19]+'</font>';
+//document.getElementById("city20").innerHTML = '<font size="1">'+names_init[20]+'</font>';
+//document.getElementById("city21").innerHTML = '<font size="1">'+names_init[21]+'</font>';
+//document.getElementById("city22").innerHTML = '<font size="1">'+names_init[22]+'</font>';
+//document.getElementById("city23").innerHTML = '<font size="1">'+names_init[23]+'</font>';
+//document.getElementById("city24").innerHTML = '<font size="1">'+names_init[24]+'</font>';
+//document.getElementById("city25").innerHTML = '<font size="1">'+names_init[25]+'</font>';
+//document.getElementById("city26").innerHTML = '<font size="1">'+names_init[26]+'</font>';
 
 lngs = city_neigs_lngs[cityid]
 lats = city_neigs_lats[cityid]

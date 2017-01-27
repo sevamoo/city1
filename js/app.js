@@ -69,6 +69,29 @@ document.getElementById("city5").innerHTML = '<font size="1">'+names_init[5]+'</
 document.getElementById("city6").innerHTML = '<font size="1">'+names_init[6]+'</font>';
 document.getElementById("city7").innerHTML = '<font size="1">'+names_init[7]+'</font>';
 document.getElementById("city8").innerHTML = '<font size="1">'+names_init[8]+'</font>';
+
+document.getElementById("city9").innerHTML = '<font size="1">'+names_init[9]+'</font>';
+document.getElementById("city10").innerHTML = '<font size="1">'+names_init[10]+'</font>';
+document.getElementById("city11").innerHTML = '<font size="1">'+names_init[11]+'</font>';
+document.getElementById("city12").innerHTML = '<font size="1">'+names_init[12]+'</font>';
+document.getElementById("city13").innerHTML = '<font size="1">'+names_init[13]+'</font>';
+document.getElementById("city14").innerHTML = '<font size="1">'+names_init[14]+'</font>';
+document.getElementById("city15").innerHTML = '<font size="1">'+names_init[15]+'</font>';
+document.getElementById("city16").innerHTML = '<font size="1">'+names_init[16]+'</font>';
+document.getElementById("city17").innerHTML = '<font size="1">'+names_init[17]+'</font>';
+
+
+document.getElementById("city18").innerHTML = '<font size="1">'+names_init[18]+'</font>';
+document.getElementById("city19").innerHTML = '<font size="1">'+names_init[19]+'</font>';
+document.getElementById("city20").innerHTML = '<font size="1">'+names_init[20]+'</font>';
+document.getElementById("city21").innerHTML = '<font size="1">'+names_init[21]+'</font>';
+document.getElementById("city22").innerHTML = '<font size="1">'+names_init[22]+'</font>';
+document.getElementById("city23").innerHTML = '<font size="1">'+names_init[23]+'</font>';
+document.getElementById("city24").innerHTML = '<font size="1">'+names_init[24]+'</font>';
+document.getElementById("city25").innerHTML = '<font size="1">'+names_init[25]+'</font>';
+document.getElementById("city26").innerHTML = '<font size="1">'+names_init[26]+'</font>';
+
+
 //document.getElementById("city9").innerHTML = '<font size="1">'+names_init[9]+'</font>';
 
 
@@ -486,6 +509,27 @@ document.getElementById("city6").innerHTML = '<font size="1">'+names_init[6]+'</
 document.getElementById("city7").innerHTML = '<font size="1">'+names_init[7]+'</font>';
 document.getElementById("city8").innerHTML = '<font size="1">'+names_init[8]+'</font>';
 
+
+document.getElementById("city9").innerHTML = '<font size="1">'+names_init[9]+'</font>';
+document.getElementById("city10").innerHTML = '<font size="1">'+names_init[10]+'</font>';
+document.getElementById("city11").innerHTML = '<font size="1">'+names_init[11]+'</font>';
+document.getElementById("city12").innerHTML = '<font size="1">'+names_init[12]+'</font>';
+document.getElementById("city13").innerHTML = '<font size="1">'+names_init[13]+'</font>';
+document.getElementById("city14").innerHTML = '<font size="1">'+names_init[14]+'</font>';
+document.getElementById("city15").innerHTML = '<font size="1">'+names_init[15]+'</font>';
+document.getElementById("city16").innerHTML = '<font size="1">'+names_init[16]+'</font>';
+document.getElementById("city17").innerHTML = '<font size="1">'+names_init[17]+'</font>';
+
+
+document.getElementById("city18").innerHTML = '<font size="1">'+names_init[18]+'</font>';
+document.getElementById("city19").innerHTML = '<font size="1">'+names_init[19]+'</font>';
+document.getElementById("city20").innerHTML = '<font size="1">'+names_init[20]+'</font>';
+document.getElementById("city21").innerHTML = '<font size="1">'+names_init[21]+'</font>';
+document.getElementById("city22").innerHTML = '<font size="1">'+names_init[22]+'</font>';
+document.getElementById("city23").innerHTML = '<font size="1">'+names_init[23]+'</font>';
+document.getElementById("city24").innerHTML = '<font size="1">'+names_init[24]+'</font>';
+document.getElementById("city25").innerHTML = '<font size="1">'+names_init[25]+'</font>';
+document.getElementById("city26").innerHTML = '<font size="1">'+names_init[26]+'</font>';
 
 lngs = city_neigs_lngs[cityid]
 lats = city_neigs_lats[cityid]

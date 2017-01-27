@@ -351,14 +351,71 @@ var lngs = {"0":-159.5872222,"1":-104.4644112,"2":-99.4415007,"3":-101.7526723,"
 	attribution.setPrefix('');
 
 	var mymap14 = L.map('mapid14',{ zoomControl:false }).setView([lats[14], lngs[14]], zoominit);
+L.tileLayer(onlyroads, {maxZoom: 18,}).addTo(mymap14);
+attribution = mymap14.attributionControl; attribution.setPrefix('');
+
+var mymap15 = L.map('mapid15',{ zoomControl:false }).setView([lats[15], lngs[15]], zoominit);
+L.tileLayer(onlyroads, {maxZoom: 18,}).addTo(mymap15);
+attribution = mymap15.attributionControl; attribution.setPrefix('');
+
+var mymap16 = L.map('mapid16',{ zoomControl:false }).setView([lats[16], lngs[16]], zoominit);
+L.tileLayer(onlyroads, {maxZoom: 18,}).addTo(mymap16);
+attribution = mymap16.attributionControl; attribution.setPrefix('');
+
+var mymap17 = L.map('mapid17',{ zoomControl:false }).setView([lats[17], lngs[17]], zoominit);
+L.tileLayer(onlyroads, {maxZoom: 18,}).addTo(mymap17);
+attribution = mymap17.attributionControl; attribution.setPrefix('');
+
+var mymap18 = L.map('mapid18',{ zoomControl:false }).setView([lats[18], lngs[18]], zoominit);
+L.tileLayer(onlyroads, {maxZoom: 18,}).addTo(mymap18);
+attribution = mymap18.attributionControl; attribution.setPrefix('');
+
+var mymap19 = L.map('mapid19',{ zoomControl:false }).setView([lats[19], lngs[19]], zoominit);
+L.tileLayer(onlyroads, {maxZoom: 18,}).addTo(mymap19);
+attribution = mymap19.attributionControl; attribution.setPrefix('');
+
+var mymap20 = L.map('mapid20',{ zoomControl:false }).setView([lats[20], lngs[20]], zoominit);
+L.tileLayer(onlyroads, {maxZoom: 18,}).addTo(mymap20);
+attribution = mymap20.attributionControl; attribution.setPrefix('');
+
+var mymap21 = L.map('mapid21',{ zoomControl:false }).setView([lats[21], lngs[21]], zoominit);
+L.tileLayer(onlyroads, {maxZoom: 18,}).addTo(mymap21);
+attribution = mymap21.attributionControl; attribution.setPrefix('');
+
+var mymap22 = L.map('mapid22',{ zoomControl:false }).setView([lats[22], lngs[22]], zoominit);
+L.tileLayer(onlyroads, {maxZoom: 18,}).addTo(mymap22);
+attribution = mymap22.attributionControl; attribution.setPrefix('');
+
+var mymap23 = L.map('mapid23',{ zoomControl:false }).setView([lats[23], lngs[23]], zoominit);
+L.tileLayer(onlyroads, {maxZoom: 18,}).addTo(mymap23);
+attribution = mymap23.attributionControl; attribution.setPrefix('');
+
+var mymap24 = L.map('mapid24',{ zoomControl:false }).setView([lats[24], lngs[24]], zoominit);
+L.tileLayer(onlyroads, {maxZoom: 18,}).addTo(mymap24);
+attribution = mymap24.attributionControl; attribution.setPrefix('');
+
+var mymap25 = L.map('mapid25',{ zoomControl:false }).setView([lats[25], lngs[25]], zoominit);
+L.tileLayer(onlyroads, {maxZoom: 18,}).addTo(mymap25);
+attribution = mymap25.attributionControl; attribution.setPrefix('');
+
+
+
+
+
+	var mymap26 = L.map('mapid26',{ zoomControl:false }).setView([lats[26], lngs[26]], zoominit);
 
 	L.tileLayer(onlyroads, {
 		maxZoom: 18,
-	}).addTo(mymap14);
-	var credits = L.control.attribution().addTo(mymap14);
+	}).addTo(mymap26);
+	var credits = L.control.attribution().addTo(mymap26);
 	credits.addAttribution('<a href="https://www.mapbox.com/">Mapbox</a>');
-	attribution = mymap14.attributionControl;
+	attribution = mymap26.attributionControl;
 	attribution.setPrefix('');
+
+
+
+
+
 
 
 
@@ -375,6 +432,7 @@ if (mapstyle == 'White'){
 onlyroads = White;
 
 }
+
 
 
 L.tileLayer(onlyroads, {
@@ -486,6 +544,54 @@ L.tileLayer(onlyroads, {
 		maxZoom: 18,
 	}).addTo(mymap14);
 
+	L.tileLayer(onlyroads, {
+maxZoom: 18,
+}).addTo(mymap15);
+
+L.tileLayer(onlyroads, {
+maxZoom: 18,
+}).addTo(mymap16);
+
+L.tileLayer(onlyroads, {
+maxZoom: 18,
+}).addTo(mymap17);
+
+L.tileLayer(onlyroads, {
+maxZoom: 18,
+}).addTo(mymap18);
+
+L.tileLayer(onlyroads, {
+maxZoom: 18,
+}).addTo(mymap19);
+
+L.tileLayer(onlyroads, {
+maxZoom: 18,
+}).addTo(mymap20);
+
+L.tileLayer(onlyroads, {
+maxZoom: 18,
+}).addTo(mymap21);
+
+L.tileLayer(onlyroads, {
+maxZoom: 18,
+}).addTo(mymap22);
+
+L.tileLayer(onlyroads, {
+maxZoom: 18,
+}).addTo(mymap23);
+
+L.tileLayer(onlyroads, {
+maxZoom: 18,
+}).addTo(mymap24);
+
+L.tileLayer(onlyroads, {
+maxZoom: 18,
+}).addTo(mymap25);
+
+L.tileLayer(onlyroads, {
+maxZoom: 18,
+}).addTo(mymap26);
+
 
 }
 
@@ -553,6 +659,18 @@ mymap11.setView( [lats[11], lngs[11]], zoominit);
 mymap12.setView( [lats[12], lngs[12]], zoominit);
 mymap13.setView( [lats[13], lngs[13]], zoominit);
 mymap14.setView( [lats[14], lngs[14]], zoominit);
+mymap15.setView( [lats[15], lngs[15]], zoominit);
+mymap16.setView( [lats[16], lngs[16]], zoominit);
+mymap17.setView( [lats[17], lngs[17]], zoominit);
+mymap18.setView( [lats[18], lngs[18]], zoominit);
+mymap19.setView( [lats[19], lngs[19]], zoominit);
+mymap20.setView( [lats[20], lngs[20]], zoominit);
+mymap21.setView( [lats[21], lngs[21]], zoominit);
+mymap22.setView( [lats[22], lngs[22]], zoominit);
+mymap23.setView( [lats[23], lngs[23]], zoominit);
+mymap24.setView( [lats[24], lngs[24]], zoominit);
+mymap25.setView( [lats[25], lngs[25]], zoominit);
+mymap26.setView( [lats[26], lngs[26]], zoominit);
 
 //document.querySelector('#ZoomVal').value = zoominit;
 
@@ -607,7 +725,18 @@ mymap11.setZoom(ZoomVal);
 mymap12.setZoom(ZoomVal);
 mymap13.setZoom(ZoomVal);
 mymap14.setZoom(ZoomVal);
-
+mymap15.setZoom(ZoomVal);
+mymap16.setZoom(ZoomVal);
+mymap17.setZoom(ZoomVal);
+mymap18.setZoom(ZoomVal);
+mymap19.setZoom(ZoomVal);
+mymap20.setZoom(ZoomVal);
+mymap21.setZoom(ZoomVal);
+mymap22.setZoom(ZoomVal);
+mymap23.setZoom(ZoomVal);
+mymap24.setZoom(ZoomVal);
+mymap25.setZoom(ZoomVal);
+mymap26.setZoom(ZoomVal);
 
 
 }

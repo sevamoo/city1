@@ -23,7 +23,6 @@ onlyroads = White;
 }
 
 
-document.getElementById("city0").innerHTML = '<font size="1">Thisissometext!</font>';
 
 var basemap ='https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw'
 var zoominit = 13.0;
@@ -60,6 +59,19 @@ $.getJSON("data/city_neigs_lngs.json", function(json) {
 
 
 var cityid = document.getElementById("cityname").value;
+
+document.getElementById("city0").innerHTML = '<font size="1">'+city_neigs_names[1][0]+'/font>';
+document.getElementById("city1").innerHTML = '<font size="1">'+city_neigs_names[1][1]+'/font>';
+document.getElementById("city2").innerHTML = '<font size="1">'+city_neigs_names[1][2]+'/font>';
+document.getElementById("city3").innerHTML = '<font size="1">'+city_neigs_names[1][3]+'/font>';
+document.getElementById("city4").innerHTML = '<font size="1">'+city_neigs_names[1][4]+'/font>';
+document.getElementById("city5").innerHTML = '<font size="1">'+city_neigs_names[1][5]+'/font>';
+document.getElementById("city6").innerHTML = '<font size="1">'+city_neigs_names[1][6]+'/font>';
+document.getElementById("city7").innerHTML = '<font size="1">'+city_neigs_names[1][7]+'/font>';
+document.getElementById("city8").innerHTML = '<font size="1">'+city_neigs_names[1][8]+'/font>';
+//document.getElementById("city9").innerHTML = '<font size="1">'+city_neigs_names[1][9]+'/font>';
+
+
 
 var lat_init = 21.386338;
 var lng_init = -157.9255357

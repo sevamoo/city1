@@ -60,7 +60,7 @@ $.getJSON("data/city_neigs_lngs.json", function(json) {
 
 var cityid = document.getElementById("cityname").value;
 var names_init = {"0":"Eleele United States","1":"Kiowa United States","2":"Highmore United States","3":"Tribune United States","4":"Luxora United States","5":"Faulkton United States","6":"Vinalhaven United States","7":"Levan United States","8":"Wauneta United States","9":"Bird Island United States","10":"Onyx United States","11":"Weatherly United States","12":"Alma Center United States","13":"Scobey United States","14":"Soper United States","15":"Yatesville United States","16":"Mescalero United States","17":"Waitsburg United States","18":"Ekalaka United States","19":"Emmet United States","20":"Enosburg Falls United States","21":"Stanberry United States","22":"Lake Preston United States","23":"West Yellowstone United States","24":"Blandinsville United States","25":"Lockesburg United States","26":"Fordville United States"}
-document.getElementById("city0").innerHTML = names_init[0];
+document.getElementById("city0").innerHTML = '<font size="1">'+names_init[0]+'</font>';
 document.getElementById("city1").innerHTML = '<font size="1">'+names_init[1]+'</font>';
 document.getElementById("city2").innerHTML = '<font size="1">'+names_init[2]+'</font>';
 document.getElementById("city3").innerHTML = '<font size="1">'+names_init[3]+'</font>';

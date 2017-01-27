@@ -321,7 +321,7 @@ var lngs = {"0":-159.5872222,"1":-104.4644112,"2":-99.4415007,"3":-101.7526723,"
 		maxZoom: 18,
 	}).addTo(mymap14);
 	var credits = L.control.attribution().addTo(mymap14);
-	credits.addAttribution('<a href="https://www.mapbox.com/map-feedback/">Mapbox</a>);
+	credits.addAttribution('<a href="https://www.mapbox.com/map-feedback/">Mapbox</a>');
 
 
 

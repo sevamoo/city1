@@ -593,7 +593,7 @@ maxZoom: 18,
 
 }
 
-
+// fefef
 function find_similar_cities(){
 
 document.querySelector('#Zoom').value = zoominit;

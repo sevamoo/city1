@@ -596,7 +596,7 @@ maxZoom: 18,
 
 function find_similar_cities(){
 
-
+document.querySelector('#Zoom').value = zoominit;
 
 cityid = document.getElementById("cityname").value;
 //console.log(cityid,citynames[cityid])

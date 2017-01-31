@@ -785,44 +785,8 @@ document.getElementById("popup").innerHTML = '<font size="1">'+names_init[0]+'</
 
 function hidencityname(){
 
-var cityid = document.getElementById("cityname").value;
-var names_init = city_neigs_names[cityid];
-
-//console.log(names_init);
 
 document.getElementById("popup").innerHTML = '';
-//document.getElementById("mapid0").innerHTML = '<font size="1">'+names_init[0]+'</font>';
-//document.getElementById("mapid1").innerHTML = '<font size="1">'+names_init[1]+'</font>';
-//document.getElementById("mapid2").innerHTML = '<font size="1">'+names_init[2]+'</font>';
-//document.getElementById("mapid3").innerHTML = '<font size="1">'+names_init[3]+'</font>';
-//document.getElementById("mapid4").innerHTML = '<font size="1">'+names_init[4]+'</font>';
-//document.getElementById("mapid5").innerHTML = '<font size="1">'+names_init[5]+'</font>';
-//document.getElementById("mapid6").innerHTML = '<font size="1">'+names_init[6]+'</font>';
-//document.getElementById("mapid7").innerHTML = '<font size="1">'+names_init[7]+'</font>';
-//document.getElementById("mapid8").innerHTML = '<font size="1">'+names_init[8]+'</font>';
-//
-//
-//document.getElementById("mapid9").innerHTML = '<font size="1">'+names_init[9]+'</font>';
-//document.getElementById("mapid10").innerHTML = '<font size="1">'+names_init[10]+'</font>';
-//document.getElementById("mapid11").innerHTML = '<font size="1">'+names_init[11]+'</font>';
-//document.getElementById("mapid12").innerHTML = '<font size="1">'+names_init[12]+'</font>';
-//document.getElementById("mapid13").innerHTML = '<font size="1">'+names_init[13]+'</font>';
-//document.getElementById("mapid14").innerHTML = '<font size="1">'+names_init[14]+'</font>';
-//document.getElementById("mapid15").innerHTML = '<font size="1">'+names_init[15]+'</font>';
-//document.getElementById("mapid16").innerHTML = '<font size="1">'+names_init[16]+'</font>';
-//document.getElementById("mapid17").innerHTML = '<font size="1">'+names_init[17]+'</font>';
-//
-//
-//document.getElementById("mapid18").innerHTML = '<font size="1">'+names_init[18]+'</font>';
-//document.getElementById("mapid19").innerHTML = '<font size="1">'+names_init[19]+'</font>';
-//document.getElementById("mapid20").innerHTML = '<font size="1">'+names_init[20]+'</font>';
-//document.getElementById("mapid21").innerHTML = '<font size="1">'+names_init[21]+'</font>';
-//document.getElementById("mapid22").innerHTML = '<font size="1">'+names_init[22]+'</font>';
-//document.getElementById("mapid23").innerHTML = '<font size="1">'+names_init[23]+'</font>';
-//document.getElementById("mapid24").innerHTML = '<font size="1">'+names_init[24]+'</font>';
-//document.getElementById("mapid25").innerHTML = '<font size="1">'+names_init[25]+'</font>';
-//document.getElementById("mapid26").innerHTML = '<font size="1">'+names_init[26]+'</font>';
-
 
 }
 

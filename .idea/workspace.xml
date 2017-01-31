@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9e3f1949-bb00-42a3-ad59-f5f28dcfcd84" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="cityfinder.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,11 +26,11 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48602486">
-              <caret line="792" column="46" selection-start-line="792" selection-start-column="46" selection-end-line="792" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.7670807">
+              <caret line="789" column="0" selection-start-line="789" selection-start-column="0" selection-end-line="789" selection-end-column="0" />
               <folding>
-                <element signature="e#0#29974#0" expanded="false" />
-                <element signature="e#0#29974#0" expanded="false" />
+                <element signature="e#0#27343#0" expanded="false" />
+                <element signature="e#0#27343#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -416,8 +415,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#29974#0" expanded="false" />
-            <element signature="e#0#29974#0" expanded="false" />
+            <element signature="e#0#27343#0" expanded="false" />
+            <element signature="e#0#27343#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -497,8 +496,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#29974#0" expanded="false" />
-            <element signature="e#0#29974#0" expanded="false" />
+            <element signature="e#0#27343#0" expanded="false" />
+            <element signature="e#0#27343#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -687,11 +686,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48602486">
-          <caret line="792" column="46" selection-start-line="792" selection-start-column="46" selection-end-line="792" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.7670807">
+          <caret line="789" column="0" selection-start-line="789" selection-start-column="0" selection-end-line="789" selection-end-column="0" />
           <folding>
-            <element signature="e#0#29974#0" expanded="false" />
-            <element signature="e#0#29974#0" expanded="false" />
+            <element signature="e#0#27343#0" expanded="false" />
+            <element signature="e#0#27343#0" expanded="false" />
           </folding>
         </state>
       </provider>

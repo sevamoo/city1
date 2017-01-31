@@ -791,7 +791,11 @@ function hidencityname(){
 
 
 document.getElementById("popup").value = '';
-document.querySelector('#popup').style.backgroundColor= "none";
+//document.querySelector('#popup').style.backgroundColor= "none";
+document.querySelector('#popup').style.backgroundColor= "white";
+
+document.querySelector('#popup').style.color= "red";
+
 //document.querySelector('#popup').value  = names_init[0]
 
 

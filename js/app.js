@@ -747,7 +747,7 @@ var names_init = city_neigs_names[cityid];
 
 //console.log(names_init);
 
-document.getElementById("popup").innerHTML = '<font size="1">'+names_init+'</font>';
+document.getElementById("popup").innerHTML = '<font size="1">'+names_init[0]+'</font>';
 //document.getElementById("mapid0").innerHTML = '<font size="1">'+names_init[0]+'</font>';
 //document.getElementById("mapid1").innerHTML = '<font size="1">'+names_init[1]+'</font>';
 //document.getElementById("mapid2").innerHTML = '<font size="1">'+names_init[2]+'</font>';

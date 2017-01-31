@@ -741,15 +741,20 @@ mymap26.setZoom(ZoomVal);
 
 
 function showcityname(obj){
-console.log(obj.id);
 var cityid = document.getElementById("cityname").value;
 var names_init = city_neigs_names[cityid];
 
 
+for (var i = 0; i <= 26 ; i++) {
+if ("mymap"+i == id){
+document.querySelector('#popup').value  = names_init[i];
 
+}
+
+}
 
 //document.getElementById("popup").innerHTML = '<font size="1">'+names_init[0]+'</font>';
-document.querySelector('#popup').value  = names_init[0]
+
 document.querySelector('#popup').style.backgroundColor= "steelblue";
 document.querySelector('#popup').style.color= "white";
 //document.getElementById("mapid0").innerHTML = '<font size="1">'+names_init[0]+'</font>';

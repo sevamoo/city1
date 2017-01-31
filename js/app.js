@@ -740,8 +740,8 @@ mymap26.setZoom(ZoomVal);
 }
 
 
-function showcityname(){
-
+function showcityname(obj){
+console.log(obj.id);
 var cityid = document.getElementById("cityname").value;
 var names_init = city_neigs_names[cityid];
 

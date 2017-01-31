@@ -745,7 +745,8 @@ function showcityname(){
 var cityid = document.getElementById("cityname").value;
 var names_init = city_neigs_names[cityid];
 
-//console.log(names_init);
+
+
 
 document.getElementById("popup").innerHTML = '<font size="1">'+names_init[0]+'</font>';
 //document.getElementById("mapid0").innerHTML = '<font size="1">'+names_init[0]+'</font>';

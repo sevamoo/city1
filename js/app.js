@@ -788,7 +788,9 @@ document.querySelector('#popup').value  = names_init[0]
 function hidencityname(){
 
 
-document.getElementById("popup").innerHTML = '';
+document.getElementById("popup").value = '';
+//document.querySelector('#popup').value  = names_init[0]
+
 
 }
 

@@ -750,6 +750,8 @@ var names_init = city_neigs_names[cityid];
 
 //document.getElementById("popup").innerHTML = '<font size="1">'+names_init[0]+'</font>';
 document.querySelector('#popup').value  = names_init[0]
+document.querySelector('#popup').background-color= "coral";
+document.querySelector('#popup').color= "white";
 //document.getElementById("mapid0").innerHTML = '<font size="1">'+names_init[0]+'</font>';
 //document.getElementById("mapid1").innerHTML = '<font size="1">'+names_init[1]+'</font>';
 //document.getElementById("mapid2").innerHTML = '<font size="1">'+names_init[2]+'</font>';
@@ -789,6 +791,7 @@ function hidencityname(){
 
 
 document.getElementById("popup").value = '';
+document.querySelector('#popup').background-color= "white";
 //document.querySelector('#popup').value  = names_init[0]
 
 

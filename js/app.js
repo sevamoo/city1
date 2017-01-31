@@ -754,7 +754,7 @@ document.querySelector('#popup').value  = names_init[i];
 }
 
 //document.getElementById("popup").innerHTML = '<font size="1">'+names_init[0]+'</font>';
-
+document.getElementById(obj.id).style.borderColor = "red";
 document.querySelector('#popup').style.backgroundColor= "steelblue";
 document.querySelector('#popup').style.color= "white";
 //document.getElementById("mapid0").innerHTML = '<font size="1">'+names_init[0]+'</font>';

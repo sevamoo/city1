@@ -746,7 +746,7 @@ var names_init = city_neigs_names[cityid];
 
 
 for (var i = 0; i <= 26 ; i++) {
-if ("mymap"+i == id){
+if ("mymap"+i == obj.id){
 document.querySelector('#popup').value  = names_init[i];
 
 }

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<title>City Finder</title>
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="shortcut icon" type="image/x-icon" href="http://leafletjs.com/examples/quick-start/docs/images/favicon.ico">
+
+	<link rel="stylesheet" href="./css/leaflet.css">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+
+	 <!-- Custom CSS -->
+    <link href="css/full-slider.css" rel="stylesheet">
+
+
+
+
+
+
+
+
+
+    <!--&lt;!&ndash;&lt;!&ndash; HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries &ndash;&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;&lt;!&ndash; WARNING: Respond.js doesn't work if you view the page via file:// &ndash;&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;&lt;!&ndash;[if lt IE 9]>&ndash;&gt;-->
+        <!--&lt;!&ndash;<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>&ndash;&gt;-->
+        <!--&lt;!&ndash;<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>&ndash;&gt;-->
+
+    <!--<![endif]&ndash;&gt;-->
+<style>
+
+
+
+.center {
+    text-align: center;
+
+}
+      .form-group {
+    margin: auto;
+    width: 60%;
+    border: 1px  steelblue;
+    padding: 10px;
+}
+
+input[type=range]{
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+	background: #ddd;
+    border: none;
+    <!--background: 3f91e5;;-->
+    <!--border: steelblue;-->
+    border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+    margin-top: -4px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+		/* style all input elements with a required attribute */
+input:required {
+  box-shadow: 4px 4px 5px goldenrod;
+}
+
+/**
+ * style input elements that have a required
+ * attribute and a focus state
+ */
+input:required:focus {
+  border: 1px solid red;
+  outline: none;
+}
+
+/**
+ * style input elements that have a required
+ * attribute and a hover state
+ */
+input:required:hover {
+  opacity: 1;
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">SimCityFinder</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+
+                    <li>
+                        <a href="#" id="about-btn">About</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <!-- Page Content -->
+
+
+
+<div><h3><br></h3></div>
+
+
+<iframe src="25k.html" width="800" height="800" frameborder="0"
+        scrolling="no" marginheight="0" marginwidth="0">
+  <p>Your browser does not support iframes.</p>
+</iframe>
+
+
+
+
+
+
+    <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Welcome to SimCityFinder!</h4>
+          </div>
+          <div class="modal-body">
+            <ul class="nav nav-tabs nav-justified" id="aboutTabs">
+              <li class="active"><a href="#about" data-toggle="tab"><i class="fa fa-question-circle"></i>&nbsp;About the project</a></li>
+
+            </ul>
+            <div class="tab-content" id="aboutTabsContent">
+              <div class="tab-pane fade active in" id="about">
+                <p>Using a styled map from <a href="mapbox.com/mapbox-studio/"target="_blank">Mapbox Studio</a> which only shows roads and road networks and the Mapbox static API, we collected the images of the road networks of more than 65K cities across the world. </p>
+                  <p>Using the collected images of the city networks, we trained a Convolutional Autoencoder Neural Network, where similar to other autoencoders, the middle layer can be seen as a dense representation of the input data. Later these dense vectors can be used to map similar data points (here, cities) next to each other. </p>
+                <p>We then just simply use the learned vectors in a K-NN framework and find similar cities to the selected city by user.</p>
+                 <p>Further visualizations and the collected data can be found at <a href= "https://github.com/sevamoo/roadsareread" target="_blank"> the project repo</a>.</p>
+                  <p>Developed by <a href="http://www.vahidmoosavi.com/" target="_blank">Vahid Moosavi</a> at the <a href="http://caad.arch.ethz.ch/" target="_blank">Chair for Computer Aided Architectural Design (CAAD), ETH Zürich</a>.</p>
+                <!--<p>Based on open source package <a href="https://github.com/bmcbride/bootleaf" target="_blank">BootLeaf</a>.</p>-->
+
+
+              </div>
+
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+	<!--<script src="static/colorbrewer.min.js"></script>-->
+    <!--<script src="static/fairify_app.js"></script>-->
+
+       <script>
+    	$("#about-btn").click(function() {
+  $("#aboutModal").modal("show");
+  $(".navbar-collapse.in").collapse("hide");
+  return false;
+});
+    </script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+
+<!--<script src="./js/leaflet.js"></script>-->
+<!--<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>-->
+
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>-->
+<!--<script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
+
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
